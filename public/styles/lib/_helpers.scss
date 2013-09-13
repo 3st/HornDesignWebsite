@@ -1,0 +1,78 @@
+//  prefix()
+//  Adds appropriate vendor prefix(es) to a $property
+//
+//  PARAMS:
+//    $property     required
+//    $values       required
+//
+//  EXAMPLES:
+//    @include prefix(border-radius, 3px)
+//    #=> -webkit-border-radius: 3px;
+//    #=> border-radius: 3px;
+
+@mixin prefix($property, $values...) {
+  
+  // TODO: keyframes
+
+  $clients: webkit moz ms o !default;
+  
+  @if $property == border-radius    { $clients: webkit; }
+  @if $property == box-shadow       { $clients: webkit; }
+  @if $property == gradient         { $clients: webkit moz o; }
+  @if $property == rotate           { }
+  @if $property == scale            { }
+  @if $property == perspective      { $clients: webkit moz ms; }
+  @if $property == transform        { $clients: webkit moz ms; }
+  @if $property == transform-style  { $clients: webkit moz ms; }
+  @if $property == transition       { $clients: webkit moz o; }
+  @if $property == box-sizing       { $clients: webkit moz o; }
+  @if $property == background-size  { $clients: webkit; }
+  @if $property == column-count     { $clients: webkit moz; }
+  @if $property == column-gap       { $clients: webkit moz; }
+  @if $property == animation        { $clients: webkit moz o; }
+  @if $property == tabsize          { $clients: moz o; }
+  @if $property == hyphens          { }
+  
+  @each $client in $clients {
+    -#{$client}-#{$property}: $values;
+  }
+  
+  #{$property}: $values;
+  
+}
+
+
+//  measure()
+//  Convenience method to multiply $root-measure by $factor.
+//
+//  PARAMS:
+//    $factor       required
+//
+//  EXAMPLES:
+//    $root-measure: 20px;
+//    
+//    margin: measure(2);
+//    #=> margin: 40px;
+//    
+//    margin: measure(0.5);
+//    #=> margin: 10px;
+
+@function measure($factor) {
+  @return unitize($root-measure * $factor);
+}
+
+
+//  image()
+
+@function image($filename) {
+  @return url( $image-directory + $filename );
+}
+
+
+// text-replace()
+
+@mixin text-replace() {
+  text-indent: 110%;
+  white-space: nowrap;
+  overflow: hidden;
+}

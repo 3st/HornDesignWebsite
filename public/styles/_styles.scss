@@ -1,0 +1,59 @@
+html, body {
+  height: 100%;
+}
+
+html {
+  font-size: unitize($root-font-size);
+}
+
+body {
+  background-color: $color-background;
+  color: $color-default;
+  font-family: $font-stack;
+  font-size: 100%;
+}
+
+a {
+  color: $color-link;
+  text-decoration: none;
+  
+  &:visited {
+    color: $color-link-visited;
+  }
+  
+  &:hover {
+    color: $color-link-hover;
+  }
+
+  &:active {
+    color: $color-link-active;
+  }
+}
+
+.screen {
+  position: relative;
+  height: 100%;
+}
+
+
+
+@media only screen and (min-width: 481px) and (max-device-width: 1024px) {
+
+}
+
+@media only screen and (max-width: 480px) {
+}
+
+
+@import "common";
+@import "sections/masthead";
+@import "sections/main";
+@import "sections/feature";
+@import "sections/portfolio";
+@import "sections/project";
+@import "sections/about";
+@import "sections/studio";
+@import "sections/news";
+@import "sections/connect";
+@import "sections/footer";
+

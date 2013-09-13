@@ -1,0 +1,246 @@
+.masthead {
+  position: relative;
+  z-index: 1000;
+  height: 120px;
+  border-bottom: 1px solid $color-gray;
+  background-color: $color-white;
+
+  h1, h2, nav.global {
+    float: left;
+  }
+
+  nav.project_list {
+    float: right;
+  }
+
+  /* the HORN logo */
+
+  h1 {
+    padding: 40px;
+    width: 120px;
+    height: 120px;
+
+    a {
+      display: block;
+      width: 40px;
+      height: 40px;
+      @include text-replace;
+      background: transparent image( 'horn.png' ) 0 0 no-repeat;
+      background-image: -webkit-image-set( image( 'horn.png' ) 1x, image( 'horn.svg' ) 2x );
+      background-size: cover;
+    }
+  }
+
+  h2 {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    width: 180px;
+    height: 120px;
+    font-size: em(14);
+    line-height: 40px;
+  }
+
+}
+
+nav.global {
+  padding-top: 40px;
+  height: 120px;
+  font-size: em(10);
+  line-height: em(14);
+
+  h3 {
+    display: none;
+    color: $color-black;
+    font-weight: normal;
+    font-size: em(10);
+    line-height: 20px;
+    text-transform: uppercase;
+  }
+
+  dl {
+    height: 40px;
+
+    dt {
+      display: none;
+    }
+
+    dd {
+      position: relative;
+      float: left;
+      margin-right: 10px;
+      height: 40px;
+      background-color: $color-white;
+      text-transform: uppercase;
+
+      a {
+        display: block;
+      }
+
+      & > a {
+        padding-top: 14px;
+        padding-bottom: 14px;
+      }
+
+      ul {
+        display: none;
+        position: absolute;
+        top: 30px;
+        left: -20px;
+        padding: 16px 20px;
+        background-color: $color-white;
+        z-index: 1000;
+
+        a {
+          line-height: em(14, 10);
+        }
+
+      }
+
+      &:hover > ul,
+      &:focus > ul {
+        display: block;
+      }
+
+    }
+
+  }
+
+}
+
+nav.project_list {
+  position: relative;
+  z-index: 1000;
+  margin-right: 20px;
+  padding: 40px 20px 20px;
+  width: 300px;
+
+  background-color: lighten($color-fpo, 20%);
+
+  ul {
+    display: none;
+  }
+
+  h3 {
+    height: 40px;
+    color: $color-accent;
+    font-size: em(14);
+    line-height: 40px;
+  }
+}
+
+
+@media only screen and (min-width: 481px) and (max-width: 1024px) {
+  
+  nav.project_list {
+    display: none;
+  }
+
+}
+
+@media only screen and (max-width: 480px) {
+  
+  .masthead {
+    padding-top: 40px;
+    height: 120px;
+    
+    h1, h2 {
+      height: 80px;
+    }
+
+    h1 {
+      padding: 20px;
+      width: 80px;
+    }
+
+    h2 {
+      padding: 20px 0;
+    }
+
+  }
+
+  nav.global {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    float: none;
+    padding: 0;
+    width: 100%;
+    height: 40px;
+    background-color: $color-gray-light;
+
+    h3 {
+      display: block;
+      float: left;
+      padding: 10px 20px;
+    }
+
+    dl {
+      background-color: $color-gray-light;
+      
+      dt {
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 40px;
+        height: 40px;
+        overflow: hidden;
+        background-color: $color-gray;
+        @include text-replace;
+        cursor: pointer;
+      }
+
+      dd {
+        display: none;
+        float: none;
+        margin-right: 40px;
+        height: auto;
+        background-color: transparent;
+
+        & + dd {
+          margin-top: 14px;
+        }
+
+        & > a {
+          padding: 0;
+          font-weight: bold;
+          line-height: em(14, 10);
+        }
+
+        ul {
+          display: block;
+          position: relative;
+          top: 0;
+          left: 0;
+          padding: 0;
+          background-color: transparent;
+        }
+
+        li {
+          margin-top: 7px;
+        }
+
+      }
+
+      &.open {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        padding: 20px;
+        height: auto;
+
+        dd {
+          display: block;
+        }
+      }
+
+    }
+  }
+  
+  nav.project_list {
+    display: none;
+  }
+
+}

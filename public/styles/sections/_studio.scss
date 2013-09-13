@@ -1,0 +1,25 @@
+.studio {
+  position: relative;
+  padding: measure(2) measure(2);
+  @extend %clearfix;
+}
+
+.studio_content {
+  background-color: lighten(green, 20%);
+
+  float: left;
+  width: measure(20);
+}
+
+.studio_illustrations {
+  background-color: lighten(green, 20%);
+
+  margin-left: measure(22);
+}
+
+.studio_people {
+  background-color: lighten(yellow, 20%);
+
+  margin-left: measure(22);
+  @extend %clearfix;
+}

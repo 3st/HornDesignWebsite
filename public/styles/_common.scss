@@ -1,0 +1,100 @@
+h3 {
+  font-weight: bold;
+  font-size: em(14, 10);
+  line-height: em(16, 14);
+}
+
+h4 {
+  font-weight: bold;
+  font-size: em(10);
+  line-height: em(12, 10);
+}
+
+.actions {
+
+  .action {
+    margin: 0 auto;
+    width: 40px;
+    height: 40px;
+
+    a, span {
+      display: block;
+      width: 40px;
+      height: 40px;
+      background-color: white;
+      background-position: 0 0;
+      background-repeat: no-repeat;
+      font-size: em(10);
+      line-height: 40px;
+      text-align: center;
+    }
+
+    &.previous span,
+    &.next span,
+    &.info span,
+    &.share span {
+      @include text-replace;
+      cursor: pointer;
+    }
+
+    &.previous span {
+      background-image: image( 'action-previous.png' );
+      background-image: -webkit-image-set( image( 'action-previous.png' ) 1x, image( 'action-previous.svg' ) 2x );
+    }
+    
+    &.next span {
+      background-image: image( 'action-next.png' );
+      background-image: -webkit-image-set( image( 'action-next.png' ) 1x, image( 'action-next.svg' ) 2x );
+    }
+    
+    &.info span {
+      background-image: image( 'action-info.png' );
+      background-image: -webkit-image-set( image( 'action-info.png' ) 1x, image( 'action-info.svg' ) 2x );
+    }
+    
+    &.share span {
+      background-image: image( 'action-share.png' );
+      background-image: -webkit-image-set( image( 'action-share.png' ) 1x, image( 'action-share.svg' ) 2x );
+    }
+    
+  }
+}
+
+figure.thumbnail {
+  background-color: white;
+
+  position: relative;
+  float: left;
+  margin-bottom: 10px;
+  margin-right: 10px;
+  width: 160px;
+  height: 220px;
+  overflow: hidden;
+
+  img {
+    display: block;
+    width: 100%;
+  }
+  
+  figcaption {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 60px;
+    font-size: em(10);
+    line-height: em(12, 10);
+  }
+}
+
+@media only screen and (min-width: 481px) and (max-device-width: 1024px) {
+
+}
+
+@media only screen and (max-width: 480px) {
+
+  figure.thumbnail {
+    width: 135px;
+  }
+
+}

@@ -1,0 +1,44 @@
+.news {
+  position: relative;
+  padding: 40px 120px;
+}
+
+.news_content {
+  background-color: lighten(blue, 20%);
+
+  float: left;
+  width: 320px;
+}
+
+.news_tweets {
+  background-color: lighten(blue, 20%);
+  
+  margin-left: 360px;
+  width: 170px;
+}
+
+
+@media only screen and (min-width: 481px) and (max-device-width: 1024px) {
+
+}
+
+@media only screen and (max-width: 480px) {
+
+  .news {
+    padding: 20px;
+  }
+
+  .news_content {
+    float: none;
+    width: 100%;
+  }
+
+  .news_tweets {
+    margin-top: 20px;
+    margin-left: 0;
+    padding-top: 20px;
+    width: 100%;
+    border-top: 1px solid $color-gray;
+  }
+
+}

@@ -1,0 +1,164 @@
+.project {
+  background-color: lighten($color-black, 50%);
+
+  position: absolute;
+  top: 120px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  @extend %clearfix;
+}
+
+.project_illustrations {
+  background-color: lighten($color-black, 90%);
+
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 120px;
+  right: 0;
+
+  .illustration {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+
+  .actions {
+    position: absolute;
+    left: -80px;
+    bottom: 0;
+    width: 40px;
+    z-index: 1002;
+  }
+}
+
+.additional_illustrations {
+  display: none;
+}
+
+.project_details {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1001;
+  padding: 40px 20px 0;
+  width: 120px;
+  border-right: 1px solid $color-gray;
+  background-color: $color-background;
+
+  dl {
+    margin-bottom: 20px;
+    background-color: $color-background;
+    font-size: em(10);
+    line-height: em(12);
+    text-align: center;
+  }
+
+  dt, dd {
+    display: block;
+  }
+
+  dt {
+    font-weight: bold;
+  }
+
+  dd + dt {
+    margin-top: em(12);
+  }
+
+  .actions {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+.project_description {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 120px;
+  width: 360px;
+  background-color: white;
+
+  &.hidden {
+    left: -360px;
+  }
+}
+
+
+@media only screen and (min-width: 481px) and (max-device-width: 1024px) {
+
+}
+
+@media only screen and (max-width: 480px) {
+
+  .project,
+  .project_illustrations,
+  .project_illustrations .illustration,
+  .project_details,
+  .project_description {
+    position: relative;
+    top: auto;
+    bottom: auto;
+    left: auto;
+    right: auto;
+  }
+
+  .project {
+    padding: 20px;
+    height: auto;
+  }
+
+  .project_illustrations {
+    margin-bottom: 20px;
+
+    .illustration {
+      width: 100%;
+    }
+  }
+
+  .additional_illustrations {
+    display: block;
+
+    .illustration {
+      background-color: rgba( 204, 153, 204, 0.5);
+
+      width: 100%;
+
+      & + .illustration {
+        margin-top: 20px;
+      }
+    }
+
+    .actions {
+      display: none;
+    }
+
+  }
+
+  .project_details {
+    float: left;
+    margin-bottom: 20px;
+    padding: 0;
+    width: 60px;
+
+    dl {
+      text-align: left;
+    }
+
+    .actions {
+      display: none;
+    }
+  }
+
+  .project_description {
+    margin-left: 80px;
+    margin-bottom: 20px;
+    width: auto;
+  }
+}

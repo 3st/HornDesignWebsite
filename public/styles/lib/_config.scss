@@ -1,0 +1,19 @@
+// The site's root font size (as applied to the HTML element).
+// This size is also referenced in the em() function.
+// See lib/_unitize.scss and _styles.scss.
+$root-font-size: 10;
+
+// The site's default font stack.
+// See _styles.scss.
+$font-stack: 'Graphik', Helvetica, Arial, sans-serif;
+
+// The site grid's root value of measure (assume px).
+// Measures can be manipulated by factor n with measure(n).
+// See @function measure($factor) in lib/_helpers.scss.
+//
+// DEPRECATE THIS, JUSTIN
+//
+$root-measure: 20;
+
+//
+$image-directory: '../images/interface/';

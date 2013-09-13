@@ -1,0 +1,159 @@
+.features {
+  background-color: lighten($color-black, 70%);
+}
+
+.feature_illustrations {
+  background-color: lighten($color-black, 90%);
+
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 120px;
+  right: 0;
+
+  .illustration {
+    background-color: lighten(blue, 40%);
+
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+}
+
+.featured_projects {
+  background-color: lighten(green, 70%);
+  width: 120px;
+  @extend %clearfix;
+}
+
+.featured_project {
+  background-color: lighten(red, 20%);
+
+  position: relative;
+  margin-right: 1px;
+  width: 119px;
+  height: 119px;
+  overflow: hidden;
+  @include prefix(transition, width 0.5s, background-color 0.5s);
+
+  & + .featured_project {
+    margin-top: 1px;
+  }
+
+  figure {
+  }
+
+  figcaption {
+    opacity: 0;
+    position: relative;
+    height: 119px;
+    @include prefix(transition, opacity 1s);
+  }
+
+  .featured_project-description {
+    position: relative;
+    padding: 10px;
+    width: 360px;
+    @extend %clearfix;
+    z-index: 1001;
+    color: $color-white;
+
+    h3 {
+      float: left;
+      width: 100px;
+    }
+
+    p {
+      float: right;
+      width: 230px;
+      font-size: em(10);
+      line-height: em(12, 10);
+    }
+
+  }
+
+  .actions {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 120px;
+    z-index: 1002;
+
+    .action {
+      float: right;
+
+      &:first-child {
+        float: left;
+      }
+
+      span {
+        cursor: pointer;
+      }
+    }
+  }
+
+
+  &:hover,
+  &.open {
+    background-color: red;
+
+    figcaption {
+      opacity: 1;
+    }
+  }
+
+  &.open {
+    width: 360px;
+  }
+
+}
+
+
+
+@media only screen and (min-width: 481px) and (max-device-width: 1024px) {
+
+}
+
+@media only screen and (max-width: 480px) {
+
+  .features {
+  }
+  
+  .feature_illustrations,
+  .feature_illustrations .illustration,
+  .featured_projects {
+    position: relative;
+    top: auto;
+    bottom: auto;
+    left: auto;
+    right: auto;
+  }
+
+  .feature_illustrations {
+
+    .illustration {
+      width: 100%;
+    }
+  }
+
+  .featured_projects {
+    width: 100%;
+    height: 79px;
+
+  }
+
+  .featured_project {
+    float: left;
+    margin-top: 1px;
+    width: 79px;
+    height: 79px;
+
+    &.open {
+      width: 79px;
+    }
+  }
+
+}

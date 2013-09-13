@@ -1,0 +1,33 @@
+main {
+  background-color: lighten(red, 10%);
+
+  position: relative;
+  z-index: 999;
+
+  .screen.fixed & {
+    position: absolute;
+    top: 0;
+    bottom: 52px; // height of footer
+    left: 0;
+    right: 0;
+    padding-top: 120px;    
+  }
+  
+}
+
+@media only screen and (min-width: 481px) and (max-device-width: 1024px) {
+
+}
+
+@media only screen and (max-width: 480px) {
+
+  .screen.fixed main {
+    position: relative;
+    top: auto;
+    bottom: auto;
+    left: auto;
+    right: auto;
+    padding-top: 0;
+  }
+
+}

@@ -1,0 +1,45 @@
+footer {
+  padding: 20px 40px;
+
+  p {
+    display: inline-block;
+    font-size: em(10);
+    line-height: em(12);
+  }
+
+  .screen.fixed & {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1003;
+    height: 52px;
+    background-color: $color-background;
+  }
+}
+
+
+@media only screen and (min-width: 481px) and (max-width: 1024px) {
+  
+}
+
+@media only screen and (max-width: 480px) {
+  
+  footer {
+    padding: 20px;
+
+    p.address {
+      display: none;
+    }
+
+    .screen.fixed & {
+      position: relative;
+      top: auto;
+      bottom: auto;
+      left: auto;
+      right: auto;
+      height: auto;
+    }
+  }
+
+}
