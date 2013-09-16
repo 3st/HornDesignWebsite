@@ -2,6 +2,7 @@
   position: relative;
   padding: 40px 40px 40px 120px;
   @extend %clearfix;
+  background-color: $color-white;
 }
 
 .studio-content {

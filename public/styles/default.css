@@ -146,13 +146,13 @@ h4 {
   .actions .action.previous span, .actions .action.previous a {
     background-image: url("../images/interface/action-previous.png");
     background-image: -webkit-image-set(url("../images/interface/action-previous.png") 1x, url("../images/interface/action-previous.svg") 2x); }
-    .actions .action.previous span:hover, .actions .action.previous span.active, .actions .action.previous a:hover, .actions .action.previous a.active {
+    .actions .action.previous span:hover, .actions .action.previous span:active, .actions .action.previous a:hover, .actions .action.previous a:active {
       background-image: url("../images/interface/action-previous-active.png");
       background-image: -webkit-image-set(url("../images/interface/action-previous-active.png") 1x, url("../images/interface/action-previous-active.svg") 2x); }
   .actions .action.next span, .actions .action.next a {
     background-image: url("../images/interface/action-next.png");
     background-image: -webkit-image-set(url("../images/interface/action-next.png") 1x, url("../images/interface/action-next.svg") 2x); }
-    .actions .action.next span:hover, .actions .action.next span.active, .actions .action.next a:hover, .actions .action.next a.active {
+    .actions .action.next span:hover, .actions .action.next span:active, .actions .action.next a:hover, .actions .action.next a:active {
       background-image: url("../images/interface/action-next-active.png");
       background-image: -webkit-image-set(url("../images/interface/action-next-active.png") 1x, url("../images/interface/action-next-active.svg") 2x); }
   .actions .action.next.inverse span, .actions .action.next.inverse a {
@@ -161,7 +161,7 @@ h4 {
   .actions .action.info span, .actions .action.info a {
     background-image: url("../images/interface/action-info.png");
     background-image: -webkit-image-set(url("../images/interface/action-info.png") 1x, url("../images/interface/action-info.svg") 2x); }
-    .actions .action.info span:hover, .actions .action.info span.active, .actions .action.info a:hover, .actions .action.info a.active {
+    .actions .action.info span:hover, .actions .action.info span:active, .actions .action.info a:hover, .actions .action.info a:active {
       background-image: url("../images/interface/action-info-active.png");
       background-image: -webkit-image-set(url("../images/interface/action-info-active.png") 1x, url("../images/interface/action-info-active.svg") 2x); }
   .actions .action.info.inverse span, .actions .action.info.inverse a {
@@ -405,7 +405,6 @@ nav.project_list {
   nav.project_list {
     display: none; } }
 main {
-  background-color: #ff3333;
   position: relative;
   z-index: 999; }
   .screen.fixed main {
@@ -721,22 +720,10 @@ main {
       .project-description article p + p,
       .project-description article p + h4 {
         margin-top: 0.6em; } }
-.about {
-  position: relative;
-  padding: 40px; }
-
-.about-content {
-  background-color: #00e600;
-  float: left;
-  width: 400px; }
-
-.about-illustrations {
-  background-color: #00e600;
-  margin-left: 440px; }
-
 .studio {
   position: relative;
-  padding: 40px 40px 40px 120px; }
+  padding: 40px 40px 40px 120px;
+  background-color: white; }
 
 .studio-content {
   float: left;
