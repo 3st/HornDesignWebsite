@@ -105,27 +105,34 @@ h4 {
     display: block;
     width: 40px;
     height: 40px;
-    background-color: white;
+    background-color: transparent;
     background-position: 0 0;
     background-repeat: no-repeat;
+    background-size: 100% 100%;
     font-size: 1em;
     line-height: 40px;
     text-align: center; }
-  .actions .action.previous span, .actions .action.next span, .actions .action.info span, .actions .action.share span {
+  .actions .action.previous span, .actions .action.previous a, .actions .action.next span, .actions .action.next a, .actions .action.info span, .actions .action.info a, .actions .action.share span, .actions .action.share a {
     text-indent: 110%;
     white-space: nowrap;
     overflow: hidden;
     cursor: pointer; }
-  .actions .action.previous span {
+  .actions .action.previous span, .actions .action.previous a {
     background-image: url("../images/interface/action-previous.png");
     background-image: -webkit-image-set(url("../images/interface/action-previous.png") 1x, url("../images/interface/action-previous.svg") 2x); }
-  .actions .action.next span {
+  .actions .action.next span, .actions .action.next a {
     background-image: url("../images/interface/action-next.png");
     background-image: -webkit-image-set(url("../images/interface/action-next.png") 1x, url("../images/interface/action-next.svg") 2x); }
-  .actions .action.info span {
+  .actions .action.next.inverse span, .actions .action.next.inverse a {
+    background-image: url("../images/interface/action-next-white.png");
+    background-image: -webkit-image-set(url("../images/interface/action-next-white.png") 1x, url("../images/interface/action-next-white.svg") 2x); }
+  .actions .action.info span, .actions .action.info a {
     background-image: url("../images/interface/action-info.png");
     background-image: -webkit-image-set(url("../images/interface/action-info.png") 1x, url("../images/interface/action-info.svg") 2x); }
-  .actions .action.share span {
+  .actions .action.info.inverse span, .actions .action.info.inverse a {
+    background-image: url("../images/interface/action-info-white.png");
+    background-image: -webkit-image-set(url("../images/interface/action-info-white.png") 1x, url("../images/interface/action-info-white.svg") 2x); }
+  .actions .action.share span, .actions .action.share a {
     background-image: url("../images/interface/action-share.png");
     background-image: -webkit-image-set(url("../images/interface/action-share.png") 1x, url("../images/interface/action-share.svg") 2x); }
 
@@ -150,6 +157,13 @@ figure.thumbnail {
     font-size: 1em;
     line-height: 1.2em; }
 
+@media only screen and (min-width: 481px) and (max-device-width: 1024px) {
+  .actions .action {
+    width: 30px;
+    height: 30px; }
+    .actions .action a {
+      width: 30px;
+      height: 30px; } }
 @media only screen and (max-width: 480px) {
   figure.thumbnail {
     width: 135px; } }
@@ -326,7 +340,7 @@ main {
   .screen.fixed main {
     position: absolute;
     top: 0;
-    bottom: 52px;
+    bottom: 0;
     left: 0;
     right: 0;
     padding-top: 120px; }
@@ -348,14 +362,19 @@ main {
   top: 0;
   bottom: 0;
   left: 120px;
-  right: 0; }
+  right: 0;
+  min-height: 600px; }
   .feature_illustrations .illustration {
     background-color: #ccccff;
     position: absolute;
     top: 0;
     bottom: 0;
     left: 0;
-    right: 0; }
+    right: 0;
+    overflow: hidden; }
+    .feature_illustrations .illustration img {
+      display: block;
+      width: 100%; }
 
 .featured_projects {
   background-color: #e6ffe6;
@@ -368,16 +387,25 @@ main {
   width: 119px;
   height: 119px;
   overflow: hidden;
-  -webkit-transition: width 0.5s, background-color 0.5s;
-  -moz-transition: width 0.5s, background-color 0.5s;
-  -o-transition: width 0.5s, background-color 0.5s;
-  transition: width 0.5s, background-color 0.5s; }
+  -webkit-transition: width 0.5s, background-color 0.125s;
+  -moz-transition: width 0.5s, background-color 0.125s;
+  -o-transition: width 0.5s, background-color 0.125s;
+  transition: width 0.5s, background-color 0.125s; }
   .featured_project + .featured_project {
     margin-top: 1px; }
+  .featured_project img {
+    opacity: 0.4;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    z-index: 1000; }
   .featured_project figcaption {
     opacity: 0;
     position: relative;
+    z-index: 1001;
     height: 119px;
+    background-color: #f37321;
     -webkit-transition: opacity 1s;
     -moz-transition: opacity 1s;
     -o-transition: opacity 1s;
@@ -426,8 +454,12 @@ main {
     left: auto;
     right: auto; }
 
-  .feature_illustrations .illustration {
-    width: 100%; }
+  .feature_illustrations {
+    min-height: 1px; }
+    .feature_illustrations .illustration {
+      width: 100%; }
+      .feature_illustrations .illustration img {
+        height: 100%; }
 
   .featured_projects {
     width: 100%;
@@ -438,6 +470,22 @@ main {
     margin-top: 1px;
     width: 79px;
     height: 79px; }
+    .featured_project figcaption {
+      width: 79px;
+      height: 79px; }
+    .featured_project .actions .action.info {
+      display: none; }
+    .featured_project .featured_project-description {
+      width: auto;
+      padding: 6px; }
+      .featured_project .featured_project-description h3 {
+        float: none;
+        width: auto;
+        font-weight: normal;
+        font-size: 1em;
+        line-height: 1.2em; }
+      .featured_project .featured_project-description p {
+        display: none; }
     .featured_project.open {
       width: 79px; } }
 .portfolio {
@@ -455,15 +503,16 @@ main {
   .portfolio {
     padding: 20px 10px 20px 20px; } }
 .project {
-  background-color: gray;
+  background-color: #009900;
   position: absolute;
   top: 120px;
   bottom: 0;
   left: 0;
-  right: 0; }
+  right: 0;
+  min-height: 400px; }
 
 .project_illustrations {
-  background-color: #e6e6e6;
+  background-color: #ccccff;
   position: absolute;
   top: 0;
   bottom: 0;
@@ -495,10 +544,10 @@ main {
   padding: 40px 20px 0;
   width: 120px;
   border-right: 1px solid #717073;
-  background-color: whitesmoke; }
+  background-color: white; }
   .project_details dl {
     margin-bottom: 20px;
-    background-color: whitesmoke;
+    background-color: white;
     font-size: 1em;
     line-height: 1.2em;
     text-align: center; }
@@ -640,23 +689,10 @@ footer {
     font-size: 1em;
     line-height: 1.2em; }
   .screen.fixed footer {
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: 1003;
-    height: 52px;
-    background-color: whitesmoke; }
+    display: none; }
 
 @media only screen and (max-width: 480px) {
   footer {
     padding: 20px; }
     footer p.address {
-      display: none; }
-    .screen.fixed footer {
-      position: relative;
-      top: auto;
-      bottom: auto;
-      left: auto;
-      right: auto;
-      height: auto; } }
+      display: none; } }

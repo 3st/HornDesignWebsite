@@ -8,13 +8,7 @@ footer {
   }
 
   .screen.fixed & {
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: 1003;
-    height: 52px;
-    background-color: $color-background;
+    display: none;
   }
 }
 
@@ -33,12 +27,6 @@ footer {
     }
 
     .screen.fixed & {
-      position: relative;
-      top: auto;
-      bottom: auto;
-      left: auto;
-      right: auto;
-      height: auto;
     }
   }
 

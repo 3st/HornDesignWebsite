@@ -21,38 +21,59 @@ h4 {
       display: block;
       width: 40px;
       height: 40px;
-      background-color: white;
+      background-color: transparent;
       background-position: 0 0;
       background-repeat: no-repeat;
+      background-size: 100% 100%;
       font-size: em(10);
       line-height: 40px;
       text-align: center;
     }
 
     &.previous span,
+    &.previous a,
     &.next span,
+    &.next a,
     &.info span,
-    &.share span {
+    &.info a,
+    &.share span,
+    &.share a {
       @include text-replace;
       cursor: pointer;
     }
 
-    &.previous span {
+    &.previous span,
+    &.previous a {
       background-image: image( 'action-previous.png' );
       background-image: -webkit-image-set( image( 'action-previous.png' ) 1x, image( 'action-previous.svg' ) 2x );
     }
     
-    &.next span {
+    &.next span,
+    &.next a {
       background-image: image( 'action-next.png' );
       background-image: -webkit-image-set( image( 'action-next.png' ) 1x, image( 'action-next.svg' ) 2x );
     }
     
-    &.info span {
+    &.next.inverse span,
+    &.next.inverse a {
+      background-image: image( 'action-next-white.png' );
+      background-image: -webkit-image-set( image( 'action-next-white.png' ) 1x, image( 'action-next-white.svg' ) 2x );
+    }
+    
+    &.info span,
+    &.info a {
       background-image: image( 'action-info.png' );
       background-image: -webkit-image-set( image( 'action-info.png' ) 1x, image( 'action-info.svg' ) 2x );
     }
     
-    &.share span {
+    &.info.inverse span,
+    &.info.inverse a {
+      background-image: image( 'action-info-white.png' );
+      background-image: -webkit-image-set( image( 'action-info-white.png' ) 1x, image( 'action-info-white.svg' ) 2x );
+    }
+    
+    &.share span,
+    &.share a {
       background-image: image( 'action-share.png' );
       background-image: -webkit-image-set( image( 'action-share.png' ) 1x, image( 'action-share.svg' ) 2x );
     }
@@ -88,6 +109,20 @@ figure.thumbnail {
 }
 
 @media only screen and (min-width: 481px) and (max-device-width: 1024px) {
+
+  .actions {
+
+    .action {
+      width: 30px;
+      height: 30px;
+
+      a {
+        width: 30px;
+        height: 30px;
+      }
+    }
+
+  }
 
 }
 
