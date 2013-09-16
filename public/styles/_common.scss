@@ -37,7 +37,9 @@ h4 {
     &.info span,
     &.info a,
     &.share span,
-    &.share a {
+    &.share a,
+    &.exit span,
+    &.exit a {
       @include text-replace;
       cursor: pointer;
     }
@@ -46,14 +48,24 @@ h4 {
     &.previous a {
       background-image: image( 'action-previous.png' );
       background-image: -webkit-image-set( image( 'action-previous.png' ) 1x, image( 'action-previous.svg' ) 2x );
+
+      &:hover, &.active {
+        background-image: image( 'action-previous-active.png' );
+        background-image: -webkit-image-set( image( 'action-previous-active.png' ) 1x, image( 'action-previous-active.svg' ) 2x );
+      }
     }
     
     &.next span,
     &.next a {
       background-image: image( 'action-next.png' );
       background-image: -webkit-image-set( image( 'action-next.png' ) 1x, image( 'action-next.svg' ) 2x );
+
+      &:hover, &.active {
+        background-image: image( 'action-next-active.png' );
+        background-image: -webkit-image-set( image( 'action-next-active.png' ) 1x, image( 'action-next-active.svg' ) 2x );
+      }
     }
-    
+
     &.next.inverse span,
     &.next.inverse a {
       background-image: image( 'action-next-white.png' );
@@ -64,6 +76,11 @@ h4 {
     &.info a {
       background-image: image( 'action-info.png' );
       background-image: -webkit-image-set( image( 'action-info.png' ) 1x, image( 'action-info.svg' ) 2x );
+
+      &:hover, &.active {
+        background-image: image( 'action-info-active.png' );
+        background-image: -webkit-image-set( image( 'action-info-active.png' ) 1x, image( 'action-info-active.svg' ) 2x );
+      }
     }
     
     &.info.inverse span,
@@ -72,12 +89,67 @@ h4 {
       background-image: -webkit-image-set( image( 'action-info-white.png' ) 1x, image( 'action-info-white.svg' ) 2x );
     }
     
-    &.share span,
-    &.share a {
-      background-image: image( 'action-share.png' );
-      background-image: -webkit-image-set( image( 'action-share.png' ) 1x, image( 'action-share.svg' ) 2x );
+    &.share {
+      span, a {
+        background-image: image( 'action-share.png' );
+        background-image: -webkit-image-set( image( 'action-share.png' ) 1x, image( 'action-share.svg' ) 2x );
+
+        &:hover, &.active {
+          background-image: image( 'action-share-active.png' );
+          background-image: -webkit-image-set( image( 'action-share-active.png' ) 1x, image( 'action-share-active.svg' ) 2x );
+        }
+      }
+
+      &.facebook {
+        span, a {
+          background-image: image( 'share-facebook.png' );
+          background-image: -webkit-image-set( image( 'share-facebook.png' ) 1x, image( 'share-facebook.svg' ) 2x );
+
+          &:hover, &.active {
+            background-image: image( 'share-facebook-active.png' );
+            background-image: -webkit-image-set( image( 'share-facebook-active.png' ) 1x, image( 'share-facebook-active.svg' ) 2x );
+          }
+        }
+      }
+
+      &.twitter {
+        span, a {
+          background-image: image( 'share-twitter.png' );
+          background-image: -webkit-image-set( image( 'share-twitter.png' ) 1x, image( 'share-twitter.svg' ) 2x );
+
+          &:hover, &.active {
+            background-image: image( 'share-twitter-active.png' );
+            background-image: -webkit-image-set( image( 'share-twitter-active.png' ) 1x, image( 'share-twitter-active.svg' ) 2x );
+          }
+        }
+      }
+
+      &.email {
+        span, a {
+          background-image: image( 'share-email.png' );
+          background-image: -webkit-image-set( image( 'share-email.png' ) 1x, image( 'share-email.svg' ) 2x );
+
+          &:hover, &.active {
+            background-image: image( 'share-email-active.png' );
+            background-image: -webkit-image-set( image( 'share-email-active.png' ) 1x, image( 'share-email-active.svg' ) 2x );
+          }
+        }
+      }
+
     }
     
+    &.exit {
+      span, a {
+        background-image: image( 'action-exit.png' );
+        background-image: -webkit-image-set( image( 'action-exit.png' ) 1x, image( 'action-exit.svg' ) 2x );
+
+        &:hover, &:active {
+          background-image: image( 'action-exit-active.png' );
+          background-image: -webkit-image-set( image( 'action-exit-active.png' ) 1x, image( 'action-exit-active.svg' ) 2x );
+        }
+      }
+    }
+
   }
 }
 

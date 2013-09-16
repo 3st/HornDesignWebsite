@@ -112,7 +112,7 @@ h4 {
     font-size: 1em;
     line-height: 40px;
     text-align: center; }
-  .actions .action.previous span, .actions .action.previous a, .actions .action.next span, .actions .action.next a, .actions .action.info span, .actions .action.info a, .actions .action.share span, .actions .action.share a {
+  .actions .action.previous span, .actions .action.previous a, .actions .action.next span, .actions .action.next a, .actions .action.info span, .actions .action.info a, .actions .action.share span, .actions .action.share a, .actions .action.exit span, .actions .action.exit a {
     text-indent: 110%;
     white-space: nowrap;
     overflow: hidden;
@@ -120,21 +120,57 @@ h4 {
   .actions .action.previous span, .actions .action.previous a {
     background-image: url("../images/interface/action-previous.png");
     background-image: -webkit-image-set(url("../images/interface/action-previous.png") 1x, url("../images/interface/action-previous.svg") 2x); }
+    .actions .action.previous span:hover, .actions .action.previous span.active, .actions .action.previous a:hover, .actions .action.previous a.active {
+      background-image: url("../images/interface/action-previous-active.png");
+      background-image: -webkit-image-set(url("../images/interface/action-previous-active.png") 1x, url("../images/interface/action-previous-active.svg") 2x); }
   .actions .action.next span, .actions .action.next a {
     background-image: url("../images/interface/action-next.png");
     background-image: -webkit-image-set(url("../images/interface/action-next.png") 1x, url("../images/interface/action-next.svg") 2x); }
+    .actions .action.next span:hover, .actions .action.next span.active, .actions .action.next a:hover, .actions .action.next a.active {
+      background-image: url("../images/interface/action-next-active.png");
+      background-image: -webkit-image-set(url("../images/interface/action-next-active.png") 1x, url("../images/interface/action-next-active.svg") 2x); }
   .actions .action.next.inverse span, .actions .action.next.inverse a {
     background-image: url("../images/interface/action-next-white.png");
     background-image: -webkit-image-set(url("../images/interface/action-next-white.png") 1x, url("../images/interface/action-next-white.svg") 2x); }
   .actions .action.info span, .actions .action.info a {
     background-image: url("../images/interface/action-info.png");
     background-image: -webkit-image-set(url("../images/interface/action-info.png") 1x, url("../images/interface/action-info.svg") 2x); }
+    .actions .action.info span:hover, .actions .action.info span.active, .actions .action.info a:hover, .actions .action.info a.active {
+      background-image: url("../images/interface/action-info-active.png");
+      background-image: -webkit-image-set(url("../images/interface/action-info-active.png") 1x, url("../images/interface/action-info-active.svg") 2x); }
   .actions .action.info.inverse span, .actions .action.info.inverse a {
     background-image: url("../images/interface/action-info-white.png");
     background-image: -webkit-image-set(url("../images/interface/action-info-white.png") 1x, url("../images/interface/action-info-white.svg") 2x); }
   .actions .action.share span, .actions .action.share a {
     background-image: url("../images/interface/action-share.png");
     background-image: -webkit-image-set(url("../images/interface/action-share.png") 1x, url("../images/interface/action-share.svg") 2x); }
+    .actions .action.share span:hover, .actions .action.share span.active, .actions .action.share a:hover, .actions .action.share a.active {
+      background-image: url("../images/interface/action-share-active.png");
+      background-image: -webkit-image-set(url("../images/interface/action-share-active.png") 1x, url("../images/interface/action-share-active.svg") 2x); }
+  .actions .action.share.facebook span, .actions .action.share.facebook a {
+    background-image: url("../images/interface/share-facebook.png");
+    background-image: -webkit-image-set(url("../images/interface/share-facebook.png") 1x, url("../images/interface/share-facebook.svg") 2x); }
+    .actions .action.share.facebook span:hover, .actions .action.share.facebook span.active, .actions .action.share.facebook a:hover, .actions .action.share.facebook a.active {
+      background-image: url("../images/interface/share-facebook-active.png");
+      background-image: -webkit-image-set(url("../images/interface/share-facebook-active.png") 1x, url("../images/interface/share-facebook-active.svg") 2x); }
+  .actions .action.share.twitter span, .actions .action.share.twitter a {
+    background-image: url("../images/interface/share-twitter.png");
+    background-image: -webkit-image-set(url("../images/interface/share-twitter.png") 1x, url("../images/interface/share-twitter.svg") 2x); }
+    .actions .action.share.twitter span:hover, .actions .action.share.twitter span.active, .actions .action.share.twitter a:hover, .actions .action.share.twitter a.active {
+      background-image: url("../images/interface/share-twitter-active.png");
+      background-image: -webkit-image-set(url("../images/interface/share-twitter-active.png") 1x, url("../images/interface/share-twitter-active.svg") 2x); }
+  .actions .action.share.email span, .actions .action.share.email a {
+    background-image: url("../images/interface/share-email.png");
+    background-image: -webkit-image-set(url("../images/interface/share-email.png") 1x, url("../images/interface/share-email.svg") 2x); }
+    .actions .action.share.email span:hover, .actions .action.share.email span.active, .actions .action.share.email a:hover, .actions .action.share.email a.active {
+      background-image: url("../images/interface/share-email-active.png");
+      background-image: -webkit-image-set(url("../images/interface/share-email-active.png") 1x, url("../images/interface/share-email-active.svg") 2x); }
+  .actions .action.exit span, .actions .action.exit a {
+    background-image: url("../images/interface/action-exit.png");
+    background-image: -webkit-image-set(url("../images/interface/action-exit.png") 1x, url("../images/interface/action-exit.svg") 2x); }
+    .actions .action.exit span:hover, .actions .action.exit span:active, .actions .action.exit a:hover, .actions .action.exit a:active {
+      background-image: url("../images/interface/action-exit-active.png");
+      background-image: -webkit-image-set(url("../images/interface/action-exit-active.png") 1x, url("../images/interface/action-exit-active.svg") 2x); }
 
 figure.thumbnail {
   background-color: white;
@@ -543,7 +579,6 @@ main {
   z-index: 1001;
   padding: 40px 20px 0;
   width: 120px;
-  border-right: 1px solid #717073;
   background-color: white; }
   .project_details dl {
     margin-bottom: 20px;
@@ -561,22 +596,47 @@ main {
     padding-left: 20px;
     padding-right: 20px; }
 
-.project_description {
+.project-description {
   position: absolute;
   top: 0;
   bottom: 0;
-  left: 120px;
+  left: -360px;
   width: 360px;
-  background-color: white; }
-  .project_description.hidden {
-    left: -360px; }
+  background-color: white;
+  -webkit-transition: left 0.5s;
+  -moz-transition: left 0.5s;
+  -o-transition: left 0.5s;
+  transition: left 0.5s; }
+  .project-description.open {
+    left: 120px; }
+  .project-description .exit {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 40px;
+    height: 40px; }
+  .project-description article {
+    position: absolute;
+    top: 40px;
+    bottom: 40px;
+    left: 0;
+    right: 0;
+    padding-right: 40px;
+    overflow: auto; }
+    .project-description article h4, .project-description article p {
+      font-size: 1.4em;
+      line-height: 1.14286em; }
+    .project-description article p + p,
+    .project-description article p + h4 {
+      margin-top: 0.57143em; }
 
 @media only screen and (max-width: 480px) {
   .project,
   .project_illustrations,
   .project_illustrations .illustration,
   .project_details,
-  .project_description {
+  .project-description,
+  .project-description article {
     position: relative;
     top: auto;
     bottom: auto;
@@ -612,10 +672,22 @@ main {
     .project_details .actions {
       display: none; }
 
-  .project_description {
+  .project-description {
     margin-left: 80px;
     margin-bottom: 20px;
-    width: auto; } }
+    width: auto; }
+    .project-description.open {
+      left: auto; }
+    .project-description .exit {
+      display: none; }
+    .project-description article {
+      padding: 0; }
+      .project-description article h4, .project-description article p {
+        font-size: 1em;
+        line-height: 1.2em; }
+      .project-description article p + p,
+      .project-description article p + h4 {
+        margin-top: 0.6em; } }
 .about {
   position: relative;
   padding: 40px; }
