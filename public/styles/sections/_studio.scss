@@ -7,30 +7,6 @@
 .studio-content {
   float: left;
   width: 400px;
-
-  article {
-
-    h4, p, ul {
-      font-size: em(14, 10);
-      line-height: em(16, 14);
-    }
-    
-    p + p {
-      margin-top: em(8, 14);
-    }
-
-    ul + p,
-    p + ul {
-      margin-top: em(16, 14);
-    }
-
-    li {
-      margin-top: em(4, 14);
-      padding-top: em(4, 14);
-      border-top: 1px solid $color-gray-light;
-    }
-
-  }
 }
 
 .studio-illustrations {
@@ -59,7 +35,7 @@
 }
 
 
-@media only screen and (min-width: 481px) and (max-device-width: 1024px) {
+@media only screen and (min-width: 481px) and (max-width: 1024px) {
 
 }
 

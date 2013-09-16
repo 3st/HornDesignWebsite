@@ -6,8 +6,55 @@ h3 {
 
 h4 {
   font-weight: bold;
-  font-size: em(10);
+  font-size: em(10, 10);
   line-height: em(12, 10);
+}
+
+.text-content {
+
+  header {
+    margin-bottom: em(8, 14);
+  }
+
+  figure {
+    margin: 20px 0;
+
+    img {
+      display: block;
+      width: 100%;
+    }
+  }
+
+  header + figure {
+    margin-top: 12px;
+  }
+
+  h4, p, ul {
+    font-size: em(14, 10);
+    line-height: em(16, 14);
+  }
+
+  p.dateline {
+    margin-top: em(8, 10);
+    font-size: em(10, 10);
+    line-height: em(12, 10);
+  }
+  
+  p + p {
+    margin-top: em(8, 14);
+  }
+
+  ul + p,
+  p + ul {
+    margin-top: em(16, 14);
+  }
+
+  li {
+    margin-top: em(4, 14);
+    padding-top: em(4, 14);
+    border-top: 1px solid $color-gray-light;
+  }
+
 }
 
 .actions {
@@ -182,7 +229,7 @@ figure.thumbnail {
   
 }
 
-@media only screen and (min-width: 481px) and (max-device-width: 1024px) {
+@media only screen and (min-width: 481px) and (max-width: 1024px) {
 
   .actions {
 

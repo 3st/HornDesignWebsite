@@ -55,10 +55,10 @@ table {
   -o-box-sizing: border-box;
   box-sizing: border-box; }
 
-.featured_projects:before, .featured_project .featured_project-description:before, .portfolio-projects:before, .project:before, .studio:before, .studio-people:before, .featured_projects:after, .featured_project .featured_project-description:after, .portfolio-projects:after, .project:after, .studio:after, .studio-people:after {
+.featured_projects:before, .featured_project .featured_project-description:before, .portfolio-projects:before, .project:before, .studio:before, .studio-people:before, .news:before, .featured_projects:after, .featured_project .featured_project-description:after, .portfolio-projects:after, .project:after, .studio:after, .studio-people:after, .news:after {
   content: " ";
   display: table; }
-.featured_projects:after, .featured_project .featured_project-description:after, .portfolio-projects:after, .project:after, .studio:after, .studio-people:after {
+.featured_projects:after, .featured_project .featured_project-description:after, .portfolio-projects:after, .project:after, .studio:after, .studio-people:after, .news:after {
   clear: both; }
 
 html, body {
@@ -74,10 +74,10 @@ body {
   font-size: 100%; }
 
 a {
-  color: #717073;
+  color: black;
   text-decoration: none; }
   a:visited {
-    color: #717073; }
+    color: black; }
   a:hover {
     color: black; }
   a:active {
@@ -96,6 +96,32 @@ h4 {
   font-weight: bold;
   font-size: 1em;
   line-height: 1.2em; }
+
+.text-content header {
+  margin-bottom: 0.57143em; }
+.text-content figure {
+  margin: 20px 0; }
+  .text-content figure img {
+    display: block;
+    width: 100%; }
+.text-content header + figure {
+  margin-top: 12px; }
+.text-content h4, .text-content p, .text-content ul {
+  font-size: 1.4em;
+  line-height: 1.14286em; }
+.text-content p.dateline {
+  margin-top: 0.8em;
+  font-size: 1em;
+  line-height: 1.2em; }
+.text-content p + p {
+  margin-top: 0.57143em; }
+.text-content ul + p,
+.text-content p + ul {
+  margin-top: 1.14286em; }
+.text-content li {
+  margin-top: 0.28571em;
+  padding-top: 0.28571em;
+  border-top: 1px solid whitesmoke; }
 
 .actions .action {
   margin: 0 auto;
@@ -195,7 +221,7 @@ figure.thumbnail {
   .slides.active {
     padding-bottom: 40px; }
 
-@media only screen and (min-width: 481px) and (max-device-width: 1024px) {
+@media only screen and (min-width: 481px) and (max-width: 1024px) {
   .actions .action {
     width: 30px;
     height: 30px; }
@@ -253,6 +279,10 @@ nav.global {
     font-size: 1em;
     line-height: 20px;
     text-transform: uppercase; }
+  nav.global a:link, nav.global a:visited {
+    color: #717073; }
+  nav.global a:hover, nav.global a:active {
+    color: black; }
   nav.global dl {
     height: 40px; }
     nav.global dl dt {
@@ -711,18 +741,6 @@ main {
 .studio-content {
   float: left;
   width: 400px; }
-  .studio-content article h4, .studio-content article p, .studio-content article ul {
-    font-size: 1.4em;
-    line-height: 1.14286em; }
-  .studio-content article p + p {
-    margin-top: 0.57143em; }
-  .studio-content article ul + p,
-  .studio-content article p + ul {
-    margin-top: 1.14286em; }
-  .studio-content article li {
-    margin-top: 0.28571em;
-    padding-top: 0.28571em;
-    border-top: 1px solid whitesmoke; }
 
 .studio-illustrations {
   margin-left: 440px; }
@@ -754,32 +772,44 @@ main {
     margin: 20px 0 0; } }
 .news {
   position: relative;
-  padding: 40px 120px; }
+  padding: 40px 120px;
+  background-color: white; }
 
-.news_content {
-  background-color: #6666ff;
+.news-content {
   float: left;
   width: 320px; }
+  .news-content article {
+    padding-bottom: 20px;
+    border-bottom: 1px solid #717073; }
+  .news-content article + article {
+    margin-top: 20px; }
 
-.news_tweets {
-  background-color: #6666ff;
+.news-tweets {
   margin-left: 360px;
   width: 170px; }
+  .news-tweets h4 {
+    margin-bottom: 1.2em; }
+  .news-tweets p {
+    font-size: 1em;
+    line-height: 1.2em; }
+  .news-tweets li + li {
+    margin-top: 1.2em; }
 
+@media only screen and (min-width: 481px) and (max-width: 1024px) {
+  .news {
+    padding: 40px; } }
 @media only screen and (max-width: 480px) {
   .news {
     padding: 20px; }
 
-  .news_content {
+  .news-content {
     float: none;
     width: 100%; }
 
-  .news_tweets {
+  .news-tweets {
     margin-top: 20px;
     margin-left: 0;
-    padding-top: 20px;
-    width: 100%;
-    border-top: 1px solid #717073; } }
+    width: 100%; } }
 .connect_form,
 .connect_info,
 .connect_map {

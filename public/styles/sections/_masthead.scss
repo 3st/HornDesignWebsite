@@ -57,6 +57,18 @@ nav.global {
     text-transform: uppercase;
   }
 
+  a {
+    
+    &:link, &:visited {
+      color: $color-gray;
+    }
+
+    &:hover, &:active {
+      color: $color-black;
+    }
+
+  }
+
   dl {
     height: 40px;
 
