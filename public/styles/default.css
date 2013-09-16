@@ -55,10 +55,10 @@ table {
   -o-box-sizing: border-box;
   box-sizing: border-box; }
 
-.featured_projects:before, .featured_project .featured_project-description:before, .portfolio-projects:before, .project:before, .studio:before, .studio_people:before, .featured_projects:after, .featured_project .featured_project-description:after, .portfolio-projects:after, .project:after, .studio:after, .studio_people:after {
+.featured_projects:before, .featured_project .featured_project-description:before, .portfolio-projects:before, .project:before, .studio:before, .studio-people:before, .featured_projects:after, .featured_project .featured_project-description:after, .portfolio-projects:after, .project:after, .studio:after, .studio-people:after {
   content: " ";
   display: table; }
-.featured_projects:after, .featured_project .featured_project-description:after, .portfolio-projects:after, .project:after, .studio:after, .studio_people:after {
+.featured_projects:after, .featured_project .featured_project-description:after, .portfolio-projects:after, .project:after, .studio:after, .studio-people:after {
   clear: both; }
 
 html, body {
@@ -173,8 +173,6 @@ h4 {
       background-image: -webkit-image-set(url("../images/interface/action-exit-active.png") 1x, url("../images/interface/action-exit-active.svg") 2x); }
 
 figure.thumbnail {
-  background-color: white;
-  position: relative;
   float: left;
   margin-bottom: 10px;
   margin-right: 10px;
@@ -185,13 +183,17 @@ figure.thumbnail {
     display: block;
     width: 100%; }
   figure.thumbnail figcaption {
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    height: 60px;
+    margin-top: 10px;
     font-size: 1em;
     line-height: 1.2em; }
+
+.slides {
+  -webkit-transition: padding 0.5s;
+  -moz-transition: padding 0.5s;
+  -o-transition: padding 0.5s;
+  transition: padding 0.5s; }
+  .slides.active {
+    padding-bottom: 40px; }
 
 @media only screen and (min-width: 481px) and (max-device-width: 1024px) {
   .actions .action {
@@ -199,7 +201,10 @@ figure.thumbnail {
     height: 30px; }
     .actions .action a {
       width: 30px;
-      height: 30px; } }
+      height: 30px; }
+
+  .slides.active {
+    padding-bottom: 30px; } }
 @media only screen and (max-width: 480px) {
   figure.thumbnail {
     width: 135px; } }
@@ -539,7 +544,6 @@ main {
   .portfolio {
     padding: 20px 10px 20px 20px; } }
 .project {
-  background-color: #009900;
   position: absolute;
   top: 120px;
   bottom: 0;
@@ -570,7 +574,7 @@ main {
 .additional_illustrations {
   display: none; }
 
-.project_details {
+.project-details {
   position: absolute;
   top: 0;
   bottom: 0;
@@ -580,19 +584,18 @@ main {
   padding: 40px 20px 0;
   width: 120px;
   background-color: white; }
-  .project_details dl {
+  .project-details dl {
     margin-bottom: 20px;
-    background-color: white;
     font-size: 1em;
     line-height: 1.2em;
     text-align: center; }
-  .project_details dt, .project_details dd {
+  .project-details dt, .project-details dd {
     display: block; }
-  .project_details dt {
+  .project-details dt {
     font-weight: bold; }
-  .project_details dd + dt {
+  .project-details dd + dt {
     margin-top: 1.2em; }
-  .project_details .actions {
+  .project-details .actions {
     padding-left: 20px;
     padding-right: 20px; }
 
@@ -634,7 +637,7 @@ main {
   .project,
   .project_illustrations,
   .project_illustrations .illustration,
-  .project_details,
+  .project-details,
   .project-description,
   .project-description article {
     position: relative;
@@ -662,14 +665,14 @@ main {
     .additional_illustrations .actions {
       display: none; }
 
-  .project_details {
+  .project-details {
     float: left;
     margin-bottom: 20px;
     padding: 0;
     width: 60px; }
-    .project_details dl {
+    .project-details dl {
       text-align: left; }
-    .project_details .actions {
+    .project-details .actions {
       display: none; }
 
   .project-description {
@@ -692,32 +695,63 @@ main {
   position: relative;
   padding: 40px; }
 
-.about_content {
+.about-content {
   background-color: #00e600;
   float: left;
   width: 400px; }
 
-.about_illustrations {
+.about-illustrations {
   background-color: #00e600;
   margin-left: 440px; }
 
 .studio {
   position: relative;
-  padding: 40px 40px; }
+  padding: 40px 40px 40px 120px; }
 
-.studio_content {
-  background-color: #00e600;
+.studio-content {
   float: left;
   width: 400px; }
+  .studio-content article h4, .studio-content article p, .studio-content article ul {
+    font-size: 1.4em;
+    line-height: 1.14286em; }
+  .studio-content article p + p {
+    margin-top: 0.57143em; }
+  .studio-content article ul + p,
+  .studio-content article p + ul {
+    margin-top: 1.14286em; }
+  .studio-content article li {
+    margin-top: 0.28571em;
+    padding-top: 0.28571em;
+    border-top: 1px solid whitesmoke; }
 
-.studio_illustrations {
-  background-color: #00e600;
+.studio-illustrations {
   margin-left: 440px; }
 
-.studio_people {
+.studio-people {
   background-color: #ffff66;
+  margin-top: 30px;
   margin-left: 440px; }
+  .studio-people p {
+    font-size: 1em;
+    line-height: 1.2em; }
+  .studio-people .name {
+    font-weight: bold; }
+    .studio-people .name .degree {
+      font-weight: normal; }
 
+@media only screen and (max-width: 480px) {
+  .studio {
+    padding: 20px; }
+
+  .studio-content {
+    float: none;
+    width: auto; }
+
+  .studio-illustrations {
+    margin: 20px 0 0; }
+
+  .studio-people {
+    margin: 20px 0 0; } }
 .news {
   position: relative;
   padding: 40px 120px; }
