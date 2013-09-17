@@ -2,7 +2,7 @@
   background-color: lighten($color-black, 70%);
 }
 
-.feature_illustrations {
+.featured_project-illustrations {
   background-color: lighten($color-black, 90%);
 
   position: absolute;
@@ -67,7 +67,7 @@
     z-index: 1001;
     height: 119px;
     background-color: $color-accent;
-    @include prefix(transition, opacity 1s);
+    @include prefix(transition, opacity 0.5s);
   }
 
   .featured_project-description {
@@ -81,6 +81,7 @@
     h3 {
       float: left;
       width: 100px;
+      cursor: default;
     }
 
     p {
@@ -140,8 +141,8 @@
   .features {
   }
   
-  .feature_illustrations,
-  .feature_illustrations .illustration,
+  .featured_project-illustrations,
+  .featured_project-illustrations .illustration,
   .featured_projects {
     position: relative;
     top: auto;
@@ -150,7 +151,7 @@
     right: auto;
   }
 
-  .feature_illustrations {
+  .featured_project-illustrations {
     min-height: 1px;
 
     .illustration {

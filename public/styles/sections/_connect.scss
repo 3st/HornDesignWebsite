@@ -1,19 +1,49 @@
-.connect {}
+.connect {
+  padding: 40px 40px 40px 120px;
+  @extend %clearfix;
+  background-color: $color-white;
+}
 
-.connect_form,
-.connect_info,
-.connect_map {
+.connect-form,
+.connect-info,
+.connect-map {
   float: left;
 }
 
-.connect_building {
+.connect-illustrations {
+  clear: left;
   float: right;
 }
 
-.connect_form {}
+.connect-form {
+  background-color: red;
 
-.connect_info {}
+  margin-right: 40px;
+  width: 320px;
 
-.connect_map {}
+  .fields.inline {
 
-.connect_building {}
+    .field {
+      width: 155px;
+    }
+
+  }
+  
+}
+
+.connect-info {
+  width: 220px;
+  margin-right: 20px;
+}
+
+.connect-map {
+  background-color: red;
+
+  width: 260px;
+  height: 350px;
+}
+
+.connect-illustrations {
+  margin-left: 20px;
+  width: 500px;
+}

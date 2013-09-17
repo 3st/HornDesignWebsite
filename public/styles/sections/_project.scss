@@ -8,7 +8,7 @@
   @extend %clearfix;
 }
 
-.project_illustrations {
+.project-illustrations {
   background-color: lighten(blue, 40%);
 
   position: absolute;
@@ -124,8 +124,8 @@
 @media only screen and (max-width: 480px) {
 
   .project,
-  .project_illustrations,
-  .project_illustrations .illustration,
+  .project-illustrations,
+  .project-illustrations .illustration,
   .project-details,
   .project-description,
   .project-description article {
@@ -141,7 +141,7 @@
     height: auto;
   }
 
-  .project_illustrations {
+  .project-illustrations {
     margin-bottom: 20px;
 
     .illustration {

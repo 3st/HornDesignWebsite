@@ -10,7 +10,35 @@ h4 {
   line-height: em(12, 10);
 }
 
-.text-content {
+.fields {
+
+  &.inline {
+    @extend %clearfix;
+
+    .field {
+      float: left;
+
+      & + .field {
+        margin-left: 10px;
+      }
+
+    }
+
+  }
+
+  .field {
+    margin-bottom: 10px;
+
+    input[type="text"],
+    textarea {
+      width: 100%;
+      border: 1px solid $color-gray;
+    }
+  }
+
+}
+
+.content {
 
   header {
     margin-bottom: em(8, 14);
