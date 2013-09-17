@@ -35,6 +35,21 @@ a {
   height: 100%;
 }
 
+::-webkit-input-placeholder {
+   color: $color-black;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+   color: $color-black;  
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   color: $color-black;  
+}
+
+:-ms-input-placeholder {  
+   color: $color-black;  
+}
 
 
 @media only screen and (min-width: 481px) and (max-width: 1024px) {

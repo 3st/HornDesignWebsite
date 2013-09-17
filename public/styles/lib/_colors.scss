@@ -2,9 +2,10 @@ $color-white:         white;
 $color-black:         black;
 
 $color-gray:          rgb( 113, 112, 115 );
+$color-gray-lightish: rgb( 196, 197, 199 );
 $color-gray-light:    rgb( 245, 245, 245 );
-$color-accent-icon:   rgb( 246, 143, 77 );
-$color-accent:        rgb( 243, 115, 33 );
+$color-orange:        rgb( 243, 115, 33 );
+$color-orange-light:  rgb( 246, 143, 77 );
 
 $color-background:    $color-gray-light;
 $color-default:       $color-gray;
@@ -13,5 +14,8 @@ $color-link:          $color-black;
 $color-link-hover:    $color-black;
 $color-link-active:   $color-black;
 $color-link-visited:  $color-link;
+
+$color-accent-icon:   $color-orange-light;
+$color-accent:        $color-orange;
 
 $color-fpo: #ccc;

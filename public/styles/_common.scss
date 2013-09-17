@@ -28,12 +28,27 @@ h4 {
 
   .field {
     margin-bottom: 10px;
-
+    
+    input[type="text"],
+    textarea,
+    button {
+      padding: 12px 15px 9px;
+      font-size: em(13, 10);
+      line-height: em(15, 13);
+    }
+    
     input[type="text"],
     textarea {
       width: 100%;
-      border: 1px solid $color-gray;
+      border: 1px solid $color-gray-lightish;
     }
+
+    button {
+      border: none;
+      background-color: $color-orange;
+      color: $color-white;
+    }
+
   }
 
 }

@@ -16,8 +16,6 @@
 }
 
 .connect-form {
-  background-color: red;
-
   margin-right: 40px;
   width: 320px;
 
@@ -28,12 +26,58 @@
     }
 
   }
-  
+
+  button {
+    width: 155px;
+  }
+
 }
 
 .connect-info {
   width: 220px;
   margin-right: 20px;
+
+  .contact-address,
+  .contact-person {
+    margin-bottom: em(8, 10);
+  }
+
+  .contact-person .name {
+    font-weight: bold;
+  }
+
+  .connect-with-us {
+    margin-top: 38px;
+
+    ul {
+      margin-top: 16px;
+      height: 40px;
+      @extend %clearfix;
+    }
+
+    li {
+      float: left;
+      width: 40px;
+      height: 40px;
+
+      & + li {
+        margin-left: 10px;
+      }
+
+      a {
+        display: block;
+        width: 40px;
+        height: 40px;
+        @include text-replace;
+        background-color: gray;
+      }
+    }
+  }
+
+  p {
+    font-size: em(14, 10);
+    line-height: em(16, 14);
+  }
 }
 
 .connect-map {

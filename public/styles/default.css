@@ -55,10 +55,10 @@ table {
   -o-box-sizing: border-box;
   box-sizing: border-box; }
 
-.fields.inline:before, .featured_projects:before, .featured_project .featured_project-description:before, .portfolio-projects:before, .project:before, .studio:before, .studio-people:before, .news:before, .connect:before, .fields.inline:after, .featured_projects:after, .featured_project .featured_project-description:after, .portfolio-projects:after, .project:after, .studio:after, .studio-people:after, .news:after, .connect:after {
+.fields.inline:before, .featured_projects:before, .featured_project .featured_project-description:before, .portfolio-projects:before, .project:before, .studio:before, .studio-people:before, .news:before, .connect:before, .connect-info .connect-with-us ul:before, .fields.inline:after, .featured_projects:after, .featured_project .featured_project-description:after, .portfolio-projects:after, .project:after, .studio:after, .studio-people:after, .news:after, .connect:after, .connect-info .connect-with-us ul:after {
   content: " ";
   display: table; }
-.fields.inline:after, .featured_projects:after, .featured_project .featured_project-description:after, .portfolio-projects:after, .project:after, .studio:after, .studio-people:after, .news:after, .connect:after {
+.fields.inline:after, .featured_projects:after, .featured_project .featured_project-description:after, .portfolio-projects:after, .project:after, .studio:after, .studio-people:after, .news:after, .connect:after, .connect-info .connect-with-us ul:after {
   clear: both; }
 
 html, body {
@@ -87,6 +87,20 @@ a {
   position: relative;
   height: 100%; }
 
+::-webkit-input-placeholder {
+  color: black; }
+
+:-moz-placeholder {
+  /* Firefox 18- */
+  color: black; }
+
+::-moz-placeholder {
+  /* Firefox 19+ */
+  color: black; }
+
+:-ms-input-placeholder {
+  color: black; }
+
 h3 {
   font-weight: bold;
   font-size: 1.4em;
@@ -104,9 +118,19 @@ h4 {
 .fields .field {
   margin-bottom: 10px; }
   .fields .field input[type="text"],
+  .fields .field textarea,
+  .fields .field button {
+    padding: 12px 15px 9px;
+    font-size: 1.3em;
+    line-height: 1.15385em; }
+  .fields .field input[type="text"],
   .fields .field textarea {
     width: 100%;
-    border: 1px solid #717073; }
+    border: 1px solid #c4c5c7; }
+  .fields .field button {
+    border: none;
+    background-color: #f37321;
+    color: white; }
 
 .content header {
   margin-bottom: 0.57143em; }
@@ -823,15 +847,43 @@ main {
   float: right; }
 
 .connect-form {
-  background-color: red;
   margin-right: 40px;
   width: 320px; }
   .connect-form .fields.inline .field {
+    width: 155px; }
+  .connect-form button {
     width: 155px; }
 
 .connect-info {
   width: 220px;
   margin-right: 20px; }
+  .connect-info .contact-address,
+  .connect-info .contact-person {
+    margin-bottom: 0.8em; }
+  .connect-info .contact-person .name {
+    font-weight: bold; }
+  .connect-info .connect-with-us {
+    margin-top: 38px; }
+    .connect-info .connect-with-us ul {
+      margin-top: 16px;
+      height: 40px; }
+    .connect-info .connect-with-us li {
+      float: left;
+      width: 40px;
+      height: 40px; }
+      .connect-info .connect-with-us li + li {
+        margin-left: 10px; }
+      .connect-info .connect-with-us li a {
+        display: block;
+        width: 40px;
+        height: 40px;
+        text-indent: 110%;
+        white-space: nowrap;
+        overflow: hidden;
+        background-color: gray; }
+  .connect-info p {
+    font-size: 1.4em;
+    line-height: 1.14286em; }
 
 .connect-map {
   background-color: red;
