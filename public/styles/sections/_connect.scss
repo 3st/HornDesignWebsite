@@ -57,20 +57,11 @@
 
     li {
       float: left;
-      width: 40px;
-      height: 40px;
 
       & + li {
         margin-left: 10px;
       }
 
-      a {
-        display: block;
-        width: 40px;
-        height: 40px;
-        @include text-replace;
-        background-color: gray;
-      }
     }
   }
 

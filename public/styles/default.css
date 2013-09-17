@@ -203,23 +203,31 @@ h4 {
     background-image: url("../images/interface/action-info-white.png");
     background-image: -webkit-image-set(url("../images/interface/action-info-white.png") 1x, url("../images/interface/action-info-white.svg") 2x); }
   .actions .action.share span, .actions .action.share a {
+    background-color: #717073;
     background-image: url("../images/interface/action-share.png");
     background-image: -webkit-image-set(url("../images/interface/action-share.png") 1x, url("../images/interface/action-share.svg") 2x); }
     .actions .action.share span:hover, .actions .action.share span.active, .actions .action.share a:hover, .actions .action.share a.active {
+      background-color: #f37321;
       background-image: url("../images/interface/action-share-active.png");
       background-image: -webkit-image-set(url("../images/interface/action-share-active.png") 1x, url("../images/interface/action-share-active.svg") 2x); }
   .actions .action.share.facebook span, .actions .action.share.facebook a {
-    background-image: url("../images/interface/share-facebook.png");
-    background-image: -webkit-image-set(url("../images/interface/share-facebook.png") 1x, url("../images/interface/share-facebook.svg") 2x); }
-    .actions .action.share.facebook span:hover, .actions .action.share.facebook span.active, .actions .action.share.facebook a:hover, .actions .action.share.facebook a.active {
-      background-image: url("../images/interface/share-facebook-active.png");
-      background-image: -webkit-image-set(url("../images/interface/share-facebook-active.png") 1x, url("../images/interface/share-facebook-active.svg") 2x); }
+    background-image: url("../images/interface/share/facebook.png");
+    background-image: -webkit-image-set(url("../images/interface/share/facebook.png") 1x, url("../images/interface/share/facebook.svg") 2x); }
+  .actions .action.share.facebook.inverse span, .actions .action.share.facebook.inverse a {
+    background-image: url("../images/interface/share/facebook-inverse.png");
+    background-image: -webkit-image-set(url("../images/interface/share/facebook-inverse.png") 1x, url("../images/interface/share/facebook-inverse.svg") 2x); }
+  .actions .action.share.linkedin span, .actions .action.share.linkedin a {
+    background-image: url("../images/interface/share/linkedin.png");
+    background-image: -webkit-image-set(url("../images/interface/share/linkedin.png") 1x, url("../images/interface/share/linkedin.svg") 2x); }
+  .actions .action.share.linkedin.inverse span, .actions .action.share.linkedin.inverse a {
+    background-image: url("../images/interface/share/linkedin-inverse.png");
+    background-image: -webkit-image-set(url("../images/interface/share/linkedin-inverse.png") 1x, url("../images/interface/share/linkedin-inverse.svg") 2x); }
   .actions .action.share.twitter span, .actions .action.share.twitter a {
-    background-image: url("../images/interface/share-twitter.png");
-    background-image: -webkit-image-set(url("../images/interface/share-twitter.png") 1x, url("../images/interface/share-twitter.svg") 2x); }
-    .actions .action.share.twitter span:hover, .actions .action.share.twitter span.active, .actions .action.share.twitter a:hover, .actions .action.share.twitter a.active {
-      background-image: url("../images/interface/share-twitter-active.png");
-      background-image: -webkit-image-set(url("../images/interface/share-twitter-active.png") 1x, url("../images/interface/share-twitter-active.svg") 2x); }
+    background-image: url("../images/interface/share/twitter.png");
+    background-image: -webkit-image-set(url("../images/interface/share/twitter.png") 1x, url("../images/interface/share/twitter.svg") 2x); }
+  .actions .action.share.twitter.inverse span, .actions .action.share.twitter.inverse a {
+    background-image: url("../images/interface/share/twitter-inverse.png");
+    background-image: -webkit-image-set(url("../images/interface/share/twitter-inverse.png") 1x, url("../images/interface/share/twitter-inverse.svg") 2x); }
   .actions .action.share.email span, .actions .action.share.email a {
     background-image: url("../images/interface/share-email.png");
     background-image: -webkit-image-set(url("../images/interface/share-email.png") 1x, url("../images/interface/share-email.svg") 2x); }
@@ -868,19 +876,9 @@ main {
       margin-top: 16px;
       height: 40px; }
     .connect-info .connect-with-us li {
-      float: left;
-      width: 40px;
-      height: 40px; }
+      float: left; }
       .connect-info .connect-with-us li + li {
         margin-left: 10px; }
-      .connect-info .connect-with-us li a {
-        display: block;
-        width: 40px;
-        height: 40px;
-        text-indent: 110%;
-        white-space: nowrap;
-        overflow: hidden;
-        background-color: gray; }
   .connect-info p {
     font-size: 1.4em;
     line-height: 1.14286em; }
