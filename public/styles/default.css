@@ -265,13 +265,40 @@ figure.thumbnail {
     font-size: 1em;
     line-height: 1.2em; }
 
-.slides {
+.slides.small {
   -webkit-transition: padding 0.5s;
   -moz-transition: padding 0.5s;
   -o-transition: padding 0.5s;
   transition: padding 0.5s; }
-  .slides.active {
+  .slides.small.active {
     padding-bottom: 40px; }
+
+.slides.large .illustration,
+.slides.large .quotation {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  overflow: hidden; }
+.slides.large .illustration img {
+  display: block;
+  width: 100%; }
+.slides.large .quotation {
+  padding: 40px 40px 40px 180px;
+  background-color: rgba(243, 115, 33, 0.5); }
+  .slides.large .quotation blockquote p, .slides.large .quotation blockquote cite {
+    color: white; }
+  .slides.large .quotation blockquote p {
+    font-family: "Graphik-Thin", Helvetica, Arial, sans-serif;
+    font-size: 6.9em;
+    line-height: 1em; }
+  .slides.large .quotation blockquote cite {
+    display: block;
+    margin-top: 0.44444em;
+    font-family: "Graphik-Light", Helvetica, Arial, sans-serif;
+    font-size: 1.8em;
+    text-transform: uppercase; }
 
 @media only screen and (min-width: 481px) and (max-width: 1024px) {
   .actions .action {
@@ -481,22 +508,37 @@ main {
 .featured_project-illustrations {
   background-color: #e6e6e6;
   position: absolute;
-  top: 0;
+  top: 120px;
   bottom: 0;
   left: 120px;
   right: 0;
   min-height: 600px; }
-  .featured_project-illustrations .illustration {
-    background-color: #ccccff;
+  .featured_project-illustrations .illustration,
+  .featured_project-illustrations .quotation {
     position: absolute;
     top: 0;
     bottom: 0;
     left: 0;
     right: 0;
     overflow: hidden; }
-    .featured_project-illustrations .illustration img {
+  .featured_project-illustrations .illustration img {
+    display: block;
+    width: 100%; }
+  .featured_project-illustrations .quotation {
+    padding: 40px 40px 40px 180px;
+    background-color: rgba(243, 115, 33, 0.5); }
+    .featured_project-illustrations .quotation blockquote p, .featured_project-illustrations .quotation blockquote cite {
+      color: white; }
+    .featured_project-illustrations .quotation blockquote p {
+      font-family: "Graphik-Thin", Helvetica, Arial, sans-serif;
+      font-size: 6.9em;
+      line-height: 1em; }
+    .featured_project-illustrations .quotation blockquote cite {
       display: block;
-      width: 100%; }
+      margin-top: 0.44444em;
+      font-family: "Graphik-Light", Helvetica, Arial, sans-serif;
+      font-size: 1.8em;
+      text-transform: uppercase; }
 
 .featured_projects {
   background-color: #e6ffe6;

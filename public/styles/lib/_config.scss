@@ -5,7 +5,8 @@ $root-font-size: 10;
 
 // The site's default font stack.
 // See _styles.scss.
-$font-stack: 'Graphik', Helvetica, Arial, sans-serif;
+$root-font-stack: Helvetica, Arial, sans-serif;
+$font-stack: 'Graphik', $root-font-stack;
 
 // The site grid's root value of measure (assume px).
 // Measures can be manipulated by factor n with measure(n).

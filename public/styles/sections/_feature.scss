@@ -6,25 +6,51 @@
   background-color: lighten($color-black, 90%);
 
   position: absolute;
-  top: 0;
+  top: 120px;
   bottom: 0;
   left: 120px;
   right: 0;
   min-height: 600px;
 
-  .illustration {
-    background-color: lighten(blue, 40%);
-
+  .illustration,
+  .quotation {
     position: absolute;
     top: 0;
     bottom: 0;
     left: 0;
     right: 0;
     overflow: hidden;
+  }
 
+  .illustration {
     img {
       display: block;
       width: 100%;
+    }
+  }
+
+  .quotation {
+    padding: 40px 40px 40px 180px;
+    background-color: rgba( $color-orange, 0.5 );
+
+    blockquote {
+      p, cite {
+        color: white;
+      }
+
+      p {
+        font-family: 'Graphik-Thin', $root-font-stack;
+        font-size: em(69, 10);
+        line-height: em(69, 69);
+      }
+
+      cite {
+        display: block;
+        margin-top: em(8, 18);
+        font-family: 'Graphik-Light', $root-font-stack;
+        font-size: em(18, 10);
+        text-transform: uppercase;
+      }
     }
   }
 }
