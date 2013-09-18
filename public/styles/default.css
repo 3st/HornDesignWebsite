@@ -200,8 +200,8 @@ h4 {
     background-image: url("../images/interface/actions/info-inverse.png");
     background-image: -webkit-image-set(url("../images/interface/actions/info-inverse.png") 1x, url("../images/interface/actions/info-inverse.svg") 2x); }
   .actions .action.info.inverse span, .actions .action.info.inverse a {
-    background-image: url("../images/interface/action-info-white.png");
-    background-image: -webkit-image-set(url("../images/interface/action-info-white.png") 1x, url("../images/interface/action-info-white.svg") 2x); }
+    background-image: url("../images/interface/actions/info-inverse.png");
+    background-image: -webkit-image-set(url("../images/interface/actions/info-inverse.png") 1x, url("../images/interface/actions/info-inverse.svg") 2x); }
   .actions .action.share span, .actions .action.share a {
     background-image: url("../images/interface/actions/share.png");
     background-image: -webkit-image-set(url("../images/interface/actions/share.png") 1x, url("../images/interface/actions/share.svg") 2x); }
@@ -553,6 +553,9 @@ main {
       float: right; }
       .featured_project .actions .action:first-child {
         float: left; }
+      .featured_project .actions .action span, .featured_project .actions .action a,
+      .featured_project .actions .action span:hover, .featured_project .actions .action a:hover {
+        background-color: transparent; }
       .featured_project .actions .action span {
         cursor: pointer; }
   .featured_project:hover, .featured_project.open {

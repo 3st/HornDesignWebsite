@@ -107,6 +107,11 @@
       &:first-child {
         float: left;
       }
+      
+      span, a,
+      span:hover, a:hover {
+        background-color: transparent;
+      }
 
       span {
         cursor: pointer;

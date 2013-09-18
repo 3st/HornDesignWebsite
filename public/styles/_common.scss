@@ -183,8 +183,8 @@ h4 {
     
     &.info.inverse {
      span, a {
-        background-image: image( 'action-info-white.png' );
-        background-image: -webkit-image-set( image( 'action-info-white.png' ) 1x, image( 'action-info-white.svg' ) 2x );
+        background-image: image( 'actions/info-inverse.png' );
+        background-image: -webkit-image-set( image( 'actions/info-inverse.png' ) 1x, image( 'actions/info-inverse.svg' ) 2x );
       }
     }
     
