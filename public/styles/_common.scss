@@ -131,49 +131,52 @@ h4 {
     &.exit span,
     &.exit a {
       @include text-replace;
+      background-color: $color-gray;
       cursor: pointer;
+
+      &:hover, &.active {
+        background-color: $color-orange;
+      }
     }
 
-    
     &.previous {
       span, a {
-        background-image: image( 'action-previous.png' );
-        background-image: -webkit-image-set( image( 'action-previous.png' ) 1x, image( 'action-previous.svg' ) 2x );
+        background-image: image( 'actions/previous.png' );
+        background-image: -webkit-image-set( image( 'actions/previous.png' ) 1x, image( 'actions/previous.svg' ) 2x );
+      }
 
-        &:hover, &:active {
-          background-image: image( 'action-previous-active.png' );
-          background-image: -webkit-image-set( image( 'action-previous-active.png' ) 1x, image( 'action-previous-active.svg' ) 2x );
+      &.inverse {
+        span, a {
+          background-image: image( 'actions/previous-inverse.png' );
+          background-image: -webkit-image-set( image( 'actions/previous-inverse.png' ) 1x, image( 'actions/previous-inverse.svg' ) 2x );
         }
       }
     }
 
     &.next {
       span, a {
-        background-image: image( 'action-next.png' );
-        background-image: -webkit-image-set( image( 'action-next.png' ) 1x, image( 'action-next.svg' ) 2x );
+        background-image: image( 'actions/next.png' );
+        background-image: -webkit-image-set( image( 'actions/next.png' ) 1x, image( 'actions/next.svg' ) 2x );
+      }
 
-        &:hover, &:active {
-          background-image: image( 'action-next-active.png' );
-          background-image: -webkit-image-set( image( 'action-next-active.png' ) 1x, image( 'action-next-active.svg' ) 2x );
+      &.inverse {
+        span, a {
+          background-image: image( 'actions/next-inverse.png' );
+          background-image: -webkit-image-set( image( 'actions/next-inverse.png' ) 1x, image( 'actions/next-inverse.svg' ) 2x );
         }
       }
     }
 
-    &.next.inverse {
-      span, a {
-        background-image: image( 'action-next-white.png' );
-        background-image: -webkit-image-set( image( 'action-next-white.png' ) 1x, image( 'action-next-white.svg' ) 2x );
-      }
-    }
-    
     &.info {
       span, a {
-        background-image: image( 'action-info.png' );
-        background-image: -webkit-image-set( image( 'action-info.png' ) 1x, image( 'action-info.svg' ) 2x );
-
-        &:hover, &:active {
-          background-image: image( 'action-info-active.png' );
-          background-image: -webkit-image-set( image( 'action-info-active.png' ) 1x, image( 'action-info-active.svg' ) 2x );
+        background-image: image( 'actions/info.png' );
+        background-image: -webkit-image-set( image( 'actions/info.png' ) 1x, image( 'actions/info.svg' ) 2x );
+      }
+      
+      &.inverse {
+        span, a {
+          background-image: image( 'actions/info-inverse.png' );
+          background-image: -webkit-image-set( image( 'actions/info-inverse.png' ) 1x, image( 'actions/info-inverse.svg' ) 2x );
         }
       }
     }
@@ -187,81 +190,99 @@ h4 {
     
     &.share {
       span, a {
-        background-color: $color-gray;
-        background-image: image( 'action-share.png' );
-        background-image: -webkit-image-set( image( 'action-share.png' ) 1x, image( 'action-share.svg' ) 2x );
+        background-image: image( 'actions/share.png' );
+        background-image: -webkit-image-set( image( 'actions/share.png' ) 1x, image( 'actions/share.svg' ) 2x );
+      }
 
-        &:hover, &.active {
-          background-color: $color-orange;
-          background-image: image( 'action-share-active.png' );
-          background-image: -webkit-image-set( image( 'action-share-active.png' ) 1x, image( 'action-share-active.svg' ) 2x );
+      &.inverse {
+        span, a {
+          background-image: image( 'actions/share-inverse.png' );
+          background-image: -webkit-image-set( image( 'actions/share-inverse.png' ) 1x, image( 'actions/share-inverse.svg' ) 2x );
         }
       }
 
       &.facebook {
         span, a {
-          background-image: image( 'share/facebook.png' );
-          background-image: -webkit-image-set( image( 'share/facebook.png' ) 1x, image( 'share/facebook.svg' ) 2x );
+          background-image: image( 'actions/facebook.png' );
+          background-image: -webkit-image-set( image( 'actions/facebook.png' ) 1x, image( 'actions/facebook.svg' ) 2x );
         }
 
         &.inverse {
           span, a {
-            background-image: image( 'share/facebook-inverse.png' );
-            background-image: -webkit-image-set( image( 'share/facebook-inverse.png' ) 1x, image( 'share/facebook-inverse.svg' ) 2x );
+            background-image: image( 'actions/facebook-inverse.png' );
+            background-image: -webkit-image-set( image( 'actions/facebook-inverse.png' ) 1x, image( 'actions/facebook-inverse.svg' ) 2x );
           }
         }
       }
 
       &.linkedin {
         span, a {
-          background-image: image( 'share/linkedin.png' );
-          background-image: -webkit-image-set( image( 'share/linkedin.png' ) 1x, image( 'share/linkedin.svg' ) 2x );
+          background-image: image( 'actions/linkedin.png' );
+          background-image: -webkit-image-set( image( 'actions/linkedin.png' ) 1x, image( 'actions/linkedin.svg' ) 2x );
         }
 
         &.inverse {
           span, a {
-            background-image: image( 'share/linkedin-inverse.png' );
-            background-image: -webkit-image-set( image( 'share/linkedin-inverse.png' ) 1x, image( 'share/linkedin-inverse.svg' ) 2x );
+            background-image: image( 'actions/linkedin-inverse.png' );
+            background-image: -webkit-image-set( image( 'actions/linkedin-inverse.png' ) 1x, image( 'actions/linkedin-inverse.svg' ) 2x );
           }
         }
       }
 
       &.twitter {
         span, a {
-          background-image: image( 'share/twitter.png' );
-          background-image: -webkit-image-set( image( 'share/twitter.png' ) 1x, image( 'share/twitter.svg' ) 2x );
+          background-image: image( 'actions/twitter.png' );
+          background-image: -webkit-image-set( image( 'actions/twitter.png' ) 1x, image( 'actions/twitter.svg' ) 2x );
         }
 
         &.inverse {
           span, a {
-            background-image: image( 'share/twitter-inverse.png' );
-            background-image: -webkit-image-set( image( 'share/twitter-inverse.png' ) 1x, image( 'share/twitter-inverse.svg' ) 2x );
+            background-image: image( 'actions/twitter-inverse.png' );
+            background-image: -webkit-image-set( image( 'actions/twitter-inverse.png' ) 1x, image( 'actions/twitter-inverse.svg' ) 2x );
           }
         }
       }
 
       &.email {
         span, a {
-          background-image: image( 'share-email.png' );
-          background-image: -webkit-image-set( image( 'share-email.png' ) 1x, image( 'share-email.svg' ) 2x );
+          background-image: image( 'actions/email.png' );
+          background-image: -webkit-image-set( image( 'actions/email.png' ) 1x, image( 'actions/email.svg' ) 2x );
+        }
 
-          &:hover, &.active {
-            background-image: image( 'share-email-active.png' );
-            background-image: -webkit-image-set( image( 'share-email-active.png' ) 1x, image( 'share-email-active.svg' ) 2x );
+        &.inverse {
+          span, a {
+            background-image: image( 'actions/email-inverse.png' );
+            background-image: -webkit-image-set( image( 'actions/email-inverse.png' ) 1x, image( 'actions/email-inverse.svg' ) 2x );
           }
         }
       }
 
     }
     
+    &.dropdown {
+      span, a {
+        background-image: image( 'actions/dropdown.png' );
+        background-image: -webkit-image-set( image( 'actions/dropdown.png' ) 1x, image( 'actions/dropdown.svg' ) 2x );
+      }
+
+      &.inverse {
+        span, a {
+          background-image: image( 'actions/dropdown-inverse.png' );
+          background-image: -webkit-image-set( image( 'actions/dropdown-inverse.png' ) 1x, image( 'actions/dropdown-inverse.svg' ) 2x );
+        }
+      }
+    }
+    
     &.exit {
       span, a {
-        background-image: image( 'action-exit.png' );
-        background-image: -webkit-image-set( image( 'action-exit.png' ) 1x, image( 'action-exit.svg' ) 2x );
+        background-image: image( 'actions/exit.png' );
+        background-image: -webkit-image-set( image( 'actions/exit.png' ) 1x, image( 'actions/exit.svg' ) 2x );
+      }
 
-        &:hover, &:active {
-          background-image: image( 'action-exit-active.png' );
-          background-image: -webkit-image-set( image( 'action-exit-active.png' ) 1x, image( 'action-exit-active.svg' ) 2x );
+      &.inverse {
+        span, a {
+          background-image: image( 'actions/exit-inverse.png' );
+          background-image: -webkit-image-set( image( 'actions/exit-inverse.png' ) 1x, image( 'actions/exit-inverse.svg' ) 2x );
         }
       }
     }

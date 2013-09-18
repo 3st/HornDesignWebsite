@@ -177,69 +177,73 @@ h4 {
     text-indent: 110%;
     white-space: nowrap;
     overflow: hidden;
+    background-color: #717073;
     cursor: pointer; }
+    .actions .action.previous span:hover, .actions .action.previous span.active, .actions .action.previous a:hover, .actions .action.previous a.active, .actions .action.next span:hover, .actions .action.next span.active, .actions .action.next a:hover, .actions .action.next a.active, .actions .action.info span:hover, .actions .action.info span.active, .actions .action.info a:hover, .actions .action.info a.active, .actions .action.share span:hover, .actions .action.share span.active, .actions .action.share a:hover, .actions .action.share a.active, .actions .action.exit span:hover, .actions .action.exit span.active, .actions .action.exit a:hover, .actions .action.exit a.active {
+      background-color: #f37321; }
   .actions .action.previous span, .actions .action.previous a {
-    background-image: url("../images/interface/action-previous.png");
-    background-image: -webkit-image-set(url("../images/interface/action-previous.png") 1x, url("../images/interface/action-previous.svg") 2x); }
-    .actions .action.previous span:hover, .actions .action.previous span:active, .actions .action.previous a:hover, .actions .action.previous a:active {
-      background-image: url("../images/interface/action-previous-active.png");
-      background-image: -webkit-image-set(url("../images/interface/action-previous-active.png") 1x, url("../images/interface/action-previous-active.svg") 2x); }
+    background-image: url("../images/interface/actions/previous.png");
+    background-image: -webkit-image-set(url("../images/interface/actions/previous.png") 1x, url("../images/interface/actions/previous.svg") 2x); }
+  .actions .action.previous.inverse span, .actions .action.previous.inverse a {
+    background-image: url("../images/interface/actions/previous-inverse.png");
+    background-image: -webkit-image-set(url("../images/interface/actions/previous-inverse.png") 1x, url("../images/interface/actions/previous-inverse.svg") 2x); }
   .actions .action.next span, .actions .action.next a {
-    background-image: url("../images/interface/action-next.png");
-    background-image: -webkit-image-set(url("../images/interface/action-next.png") 1x, url("../images/interface/action-next.svg") 2x); }
-    .actions .action.next span:hover, .actions .action.next span:active, .actions .action.next a:hover, .actions .action.next a:active {
-      background-image: url("../images/interface/action-next-active.png");
-      background-image: -webkit-image-set(url("../images/interface/action-next-active.png") 1x, url("../images/interface/action-next-active.svg") 2x); }
+    background-image: url("../images/interface/actions/next.png");
+    background-image: -webkit-image-set(url("../images/interface/actions/next.png") 1x, url("../images/interface/actions/next.svg") 2x); }
   .actions .action.next.inverse span, .actions .action.next.inverse a {
-    background-image: url("../images/interface/action-next-white.png");
-    background-image: -webkit-image-set(url("../images/interface/action-next-white.png") 1x, url("../images/interface/action-next-white.svg") 2x); }
+    background-image: url("../images/interface/actions/next-inverse.png");
+    background-image: -webkit-image-set(url("../images/interface/actions/next-inverse.png") 1x, url("../images/interface/actions/next-inverse.svg") 2x); }
   .actions .action.info span, .actions .action.info a {
-    background-image: url("../images/interface/action-info.png");
-    background-image: -webkit-image-set(url("../images/interface/action-info.png") 1x, url("../images/interface/action-info.svg") 2x); }
-    .actions .action.info span:hover, .actions .action.info span:active, .actions .action.info a:hover, .actions .action.info a:active {
-      background-image: url("../images/interface/action-info-active.png");
-      background-image: -webkit-image-set(url("../images/interface/action-info-active.png") 1x, url("../images/interface/action-info-active.svg") 2x); }
+    background-image: url("../images/interface/actions/info.png");
+    background-image: -webkit-image-set(url("../images/interface/actions/info.png") 1x, url("../images/interface/actions/info.svg") 2x); }
+  .actions .action.info.inverse span, .actions .action.info.inverse a {
+    background-image: url("../images/interface/actions/info-inverse.png");
+    background-image: -webkit-image-set(url("../images/interface/actions/info-inverse.png") 1x, url("../images/interface/actions/info-inverse.svg") 2x); }
   .actions .action.info.inverse span, .actions .action.info.inverse a {
     background-image: url("../images/interface/action-info-white.png");
     background-image: -webkit-image-set(url("../images/interface/action-info-white.png") 1x, url("../images/interface/action-info-white.svg") 2x); }
   .actions .action.share span, .actions .action.share a {
-    background-color: #717073;
-    background-image: url("../images/interface/action-share.png");
-    background-image: -webkit-image-set(url("../images/interface/action-share.png") 1x, url("../images/interface/action-share.svg") 2x); }
-    .actions .action.share span:hover, .actions .action.share span.active, .actions .action.share a:hover, .actions .action.share a.active {
-      background-color: #f37321;
-      background-image: url("../images/interface/action-share-active.png");
-      background-image: -webkit-image-set(url("../images/interface/action-share-active.png") 1x, url("../images/interface/action-share-active.svg") 2x); }
+    background-image: url("../images/interface/actions/share.png");
+    background-image: -webkit-image-set(url("../images/interface/actions/share.png") 1x, url("../images/interface/actions/share.svg") 2x); }
+  .actions .action.share.inverse span, .actions .action.share.inverse a {
+    background-image: url("../images/interface/actions/share-inverse.png");
+    background-image: -webkit-image-set(url("../images/interface/actions/share-inverse.png") 1x, url("../images/interface/actions/share-inverse.svg") 2x); }
   .actions .action.share.facebook span, .actions .action.share.facebook a {
-    background-image: url("../images/interface/share/facebook.png");
-    background-image: -webkit-image-set(url("../images/interface/share/facebook.png") 1x, url("../images/interface/share/facebook.svg") 2x); }
+    background-image: url("../images/interface/actions/facebook.png");
+    background-image: -webkit-image-set(url("../images/interface/actions/facebook.png") 1x, url("../images/interface/actions/facebook.svg") 2x); }
   .actions .action.share.facebook.inverse span, .actions .action.share.facebook.inverse a {
-    background-image: url("../images/interface/share/facebook-inverse.png");
-    background-image: -webkit-image-set(url("../images/interface/share/facebook-inverse.png") 1x, url("../images/interface/share/facebook-inverse.svg") 2x); }
+    background-image: url("../images/interface/actions/facebook-inverse.png");
+    background-image: -webkit-image-set(url("../images/interface/actions/facebook-inverse.png") 1x, url("../images/interface/actions/facebook-inverse.svg") 2x); }
   .actions .action.share.linkedin span, .actions .action.share.linkedin a {
-    background-image: url("../images/interface/share/linkedin.png");
-    background-image: -webkit-image-set(url("../images/interface/share/linkedin.png") 1x, url("../images/interface/share/linkedin.svg") 2x); }
+    background-image: url("../images/interface/actions/linkedin.png");
+    background-image: -webkit-image-set(url("../images/interface/actions/linkedin.png") 1x, url("../images/interface/actions/linkedin.svg") 2x); }
   .actions .action.share.linkedin.inverse span, .actions .action.share.linkedin.inverse a {
-    background-image: url("../images/interface/share/linkedin-inverse.png");
-    background-image: -webkit-image-set(url("../images/interface/share/linkedin-inverse.png") 1x, url("../images/interface/share/linkedin-inverse.svg") 2x); }
+    background-image: url("../images/interface/actions/linkedin-inverse.png");
+    background-image: -webkit-image-set(url("../images/interface/actions/linkedin-inverse.png") 1x, url("../images/interface/actions/linkedin-inverse.svg") 2x); }
   .actions .action.share.twitter span, .actions .action.share.twitter a {
-    background-image: url("../images/interface/share/twitter.png");
-    background-image: -webkit-image-set(url("../images/interface/share/twitter.png") 1x, url("../images/interface/share/twitter.svg") 2x); }
+    background-image: url("../images/interface/actions/twitter.png");
+    background-image: -webkit-image-set(url("../images/interface/actions/twitter.png") 1x, url("../images/interface/actions/twitter.svg") 2x); }
   .actions .action.share.twitter.inverse span, .actions .action.share.twitter.inverse a {
-    background-image: url("../images/interface/share/twitter-inverse.png");
-    background-image: -webkit-image-set(url("../images/interface/share/twitter-inverse.png") 1x, url("../images/interface/share/twitter-inverse.svg") 2x); }
+    background-image: url("../images/interface/actions/twitter-inverse.png");
+    background-image: -webkit-image-set(url("../images/interface/actions/twitter-inverse.png") 1x, url("../images/interface/actions/twitter-inverse.svg") 2x); }
   .actions .action.share.email span, .actions .action.share.email a {
-    background-image: url("../images/interface/share-email.png");
-    background-image: -webkit-image-set(url("../images/interface/share-email.png") 1x, url("../images/interface/share-email.svg") 2x); }
-    .actions .action.share.email span:hover, .actions .action.share.email span.active, .actions .action.share.email a:hover, .actions .action.share.email a.active {
-      background-image: url("../images/interface/share-email-active.png");
-      background-image: -webkit-image-set(url("../images/interface/share-email-active.png") 1x, url("../images/interface/share-email-active.svg") 2x); }
+    background-image: url("../images/interface/actions/email.png");
+    background-image: -webkit-image-set(url("../images/interface/actions/email.png") 1x, url("../images/interface/actions/email.svg") 2x); }
+  .actions .action.share.email.inverse span, .actions .action.share.email.inverse a {
+    background-image: url("../images/interface/actions/email-inverse.png");
+    background-image: -webkit-image-set(url("../images/interface/actions/email-inverse.png") 1x, url("../images/interface/actions/email-inverse.svg") 2x); }
+  .actions .action.dropdown span, .actions .action.dropdown a {
+    background-image: url("../images/interface/actions/dropdown.png");
+    background-image: -webkit-image-set(url("../images/interface/actions/dropdown.png") 1x, url("../images/interface/actions/dropdown.svg") 2x); }
+  .actions .action.dropdown.inverse span, .actions .action.dropdown.inverse a {
+    background-image: url("../images/interface/actions/dropdown-inverse.png");
+    background-image: -webkit-image-set(url("../images/interface/actions/dropdown-inverse.png") 1x, url("../images/interface/actions/dropdown-inverse.svg") 2x); }
   .actions .action.exit span, .actions .action.exit a {
-    background-image: url("../images/interface/action-exit.png");
-    background-image: -webkit-image-set(url("../images/interface/action-exit.png") 1x, url("../images/interface/action-exit.svg") 2x); }
-    .actions .action.exit span:hover, .actions .action.exit span:active, .actions .action.exit a:hover, .actions .action.exit a:active {
-      background-image: url("../images/interface/action-exit-active.png");
-      background-image: -webkit-image-set(url("../images/interface/action-exit-active.png") 1x, url("../images/interface/action-exit-active.svg") 2x); }
+    background-image: url("../images/interface/actions/exit.png");
+    background-image: -webkit-image-set(url("../images/interface/actions/exit.png") 1x, url("../images/interface/actions/exit.svg") 2x); }
+  .actions .action.exit.inverse span, .actions .action.exit.inverse a {
+    background-image: url("../images/interface/actions/exit-inverse.png");
+    background-image: -webkit-image-set(url("../images/interface/actions/exit-inverse.png") 1x, url("../images/interface/actions/exit-inverse.svg") 2x); }
 
 figure.thumbnail {
   float: left;
