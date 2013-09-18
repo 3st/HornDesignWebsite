@@ -781,12 +781,22 @@ main {
   margin-left: 440px; }
 
 .studio-people {
-  background-color: #ffff66;
   margin-top: 30px;
   margin-left: 440px; }
   .studio-people p {
     font-size: 1em;
     line-height: 1.2em; }
+  .studio-people .person > a {
+    display: block;
+    background-color: #f37321; }
+    .studio-people .person > a img {
+      opacity: 0.5;
+      -webkit-transition: opacity 0.5s;
+      -moz-transition: opacity 0.5s;
+      -o-transition: opacity 0.5s;
+      transition: opacity 0.5s; }
+      .studio-people .person > a img:hover {
+        opacity: 1; }
   .studio-people .name {
     font-weight: bold; }
     .studio-people .name .degree {
