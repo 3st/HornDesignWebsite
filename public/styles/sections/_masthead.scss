@@ -109,8 +109,13 @@ nav.global {
       }
 
       &:hover > ul,
-      &:focus > ul {
+      &:focus > ul,
+      &.active > ul {
         display: block;
+      }
+
+      &.hovers > ul {
+        @extend %hovers;
       }
 
     }

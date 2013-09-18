@@ -35,6 +35,8 @@ a {
   height: 100%;
 }
 
+/* placeholder text */
+
 ::-webkit-input-placeholder {
    color: $color-black;
 }
@@ -61,7 +63,7 @@ a {
 }
 
 
-@import "common";
+@import "sections/common";
 @import "sections/masthead";
 @import "sections/main";
 @import "sections/feature";

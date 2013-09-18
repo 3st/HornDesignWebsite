@@ -36,13 +36,12 @@
 }
 
 .featured_project {
-  background-color: lighten(red, 20%);
-
   position: relative;
   margin-right: 1px;
   width: 119px;
   height: 119px;
   overflow: hidden;
+  background-color: $color-accent;
   @include prefix(transition, width 0.5s, background-color 0.125s);
 
   & + .featured_project {
@@ -121,15 +120,13 @@
 
 
   &:hover,
-  &.open {
-    background-color: red;
-
+  &.active {
     figcaption {
       opacity: 1;
     }
   }
 
-  &.open {
+  &.active.open {
     width: 360px;
   }
 
@@ -171,7 +168,6 @@
   .featured_projects {
     width: 100%;
     height: 79px;
-
   }
 
   .featured_project {
@@ -186,7 +182,7 @@
     }
 
     .actions {
-
+      
       .action {
         &.info {
           display: none;

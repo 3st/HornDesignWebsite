@@ -61,6 +61,10 @@ table {
 .fields.inline:after, .featured_projects:after, .featured_project .featured_project-description:after, .portfolio-projects:after, .project:after, .studio:after, .studio-people:after, .news:after, .connect:after, .connect-info .connect-with-us ul:after {
   clear: both; }
 
+nav.global dl dd.hovers > ul {
+  -webkit-user-select: none;
+  -webkit-touch-callout: none; }
+
 html, body {
   height: 100%; }
 
@@ -87,6 +91,7 @@ a {
   position: relative;
   height: 100%; }
 
+/* placeholder text */
 ::-webkit-input-placeholder {
   color: black; }
 
@@ -272,7 +277,7 @@ figure.thumbnail {
   .actions .action {
     width: 30px;
     height: 30px; }
-    .actions .action a {
+    .actions .action span, .actions .action a {
       width: 30px;
       height: 30px; }
 
@@ -356,7 +361,7 @@ nav.global {
         z-index: 1000; }
         nav.global dl dd ul a {
           line-height: 1.4em; }
-      nav.global dl dd:hover > ul, nav.global dl dd:focus > ul {
+      nav.global dl dd:hover > ul, nav.global dl dd:focus > ul, nav.global dl dd.active > ul {
         display: block; }
 
 nav.project_list {
@@ -498,12 +503,12 @@ main {
   width: 120px; }
 
 .featured_project {
-  background-color: #ff6666;
   position: relative;
   margin-right: 1px;
   width: 119px;
   height: 119px;
   overflow: hidden;
+  background-color: #f37321;
   -webkit-transition: width 0.5s, background-color 0.125s;
   -moz-transition: width 0.5s, background-color 0.125s;
   -o-transition: width 0.5s, background-color 0.125s;
@@ -558,11 +563,9 @@ main {
         background-color: transparent; }
       .featured_project .actions .action span {
         cursor: pointer; }
-  .featured_project:hover, .featured_project.open {
-    background-color: red; }
-    .featured_project:hover figcaption, .featured_project.open figcaption {
-      opacity: 1; }
-  .featured_project.open {
+  .featured_project:hover figcaption, .featured_project.active figcaption {
+    opacity: 1; }
+  .featured_project.active.open {
     width: 360px; }
 
 @media only screen and (max-width: 480px) {

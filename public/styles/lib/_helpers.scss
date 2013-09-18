@@ -42,26 +42,6 @@
 }
 
 
-//  measure()
-//  Convenience method to multiply $root-measure by $factor.
-//
-//  PARAMS:
-//    $factor       required
-//
-//  EXAMPLES:
-//    $root-measure: 20px;
-//    
-//    margin: measure(2);
-//    #=> margin: 40px;
-//    
-//    margin: measure(0.5);
-//    #=> margin: 10px;
-
-@function measure($factor) {
-  @return unitize($root-measure * $factor);
-}
-
-
 //  image()
 
 @function image($filename) {
